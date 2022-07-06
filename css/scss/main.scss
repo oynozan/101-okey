@@ -1,0 +1,705 @@
+@import 'fonts.scss';
+
+body {
+    margin:0;
+    padding:0;
+    overflow-x: hidden !important;
+    background-image: url("../images/background.png");
+}
+
+.max-width-1920 {
+    max-width: 1920px;
+}
+
+.container-fluid {
+    margin-top:50px;
+}
+
+//Side menu
+.side-menu-container {
+    padding:0;
+}
+.side-menu {
+    height:675px;
+    border:3px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    
+    &.left-menu {
+        background-image:linear-gradient(to left, rgb(0, 82, 0), green);
+        border-right: none;
+
+        button:not(.hide-button) {
+            width:80px;
+            background: none;
+            border:none;
+    
+            img {
+                width:65px;
+            }
+        }
+        
+        .hide-button {
+            display: none;
+            position: absolute;
+            top:50%;
+            transform: translateY(-50%);
+            right:-30px;
+            width:40px;
+            height:40px;
+            border:3px solid black;
+            border-radius: 100%;
+        }
+    }
+
+    &.right-menu {
+        background-image: none;
+        background-color: rgb(255, 255, 255);
+        border:3px solid black;
+        border-left:none;
+
+        .hide-button {
+            display: none;
+            position: absolute;
+            top:50%;
+            transform: translateY(-50%);
+            left:-30px;
+            width:40px;
+            height:40px;
+            border:3px solid black;
+            border-radius: 100%;
+        }
+
+        .title-container {
+            border-bottom:3px solid black;
+            height:70px;
+            border-radius:0 20px 0 0;
+            background-image: url("../images/floor-tile.png");
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            h6 {
+                height: fit-content;
+                font-size:25px;
+                font-family: $l;
+            }
+        }
+
+        .users {
+            overflow-y: auto;
+            overflow-x: hidden;
+            height: 550px;
+
+            .user {
+                display: block;
+                width:100%;
+                height: fit-content;
+                padding:10px 5px;
+
+                > img {
+                    width:50px;
+                    border-radius:100%;
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+
+                > div {
+                    font-family: $y;
+                    display: inline-block;
+                    vertical-align: middle;
+
+                    p {
+                        font-family: $l;
+                        font-weight: 400;
+                        margin-bottom:0;
+                    }
+                    
+                    img {
+                        width:25px;
+                        margin-left:5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//Header
+.header {
+    height:175px;
+    background-color: rgb(0, 49, 112);
+    border-radius: 30px 30px 0 0;
+    position: relative;
+    border:3px solid black;
+    border-bottom:none;
+
+    svg {
+        position: absolute;
+        bottom:0;
+        width:100%;
+        z-index:0;
+        left:0;
+        height:120%;
+    }
+
+    .header-top {
+        position: relative;
+        display: flex;
+        height:110px;
+        justify-content:space-between;
+        align-items:center;
+
+        > div {
+            height: fit-content;
+            margin-top:10px;
+            width:100%;
+
+            &.profile {
+                padding:8px 10px;
+                border-radius: 10px;
+                display: flex;
+                justify-content: space-evenly;
+
+                > div:not(.coin) {
+                    margin-right:10px;
+                    width:100px;
+
+                    img {
+                        height:50px;
+                        border-radius: 100%;
+                        border:3px solid rgb(0, 0, 0);
+                        display: block;
+                        margin: 0 auto;
+                    }
+    
+                    p {
+                        margin-bottom: 0;
+                        color:white;
+                        width: 100%;
+                        font-family: $l;
+                        font-weight: 400;
+                        text-align: center;
+                        overflow: hidden;
+                        white-space: nowrap;
+    
+                        span {
+                            font-weight: 700;
+                        }
+                    }
+                }
+
+                .coin {
+                    padding:5px 10px;
+                    min-width: 150px;
+                    width: 100%;
+                    position: relative;
+    
+                    > div {
+                        max-width:200px;
+                        border-radius: 10px;
+                        padding:5px 5px 5px 20px;
+                        background-color: rgba(0, 21, 59, 0.76);
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        img {
+                            height:45px;
+                            background-color: rgb(0, 168, 247);
+                            border-radius: 10px;
+                            padding:5px;
+                            margin:0 !important;
+                        }
+                        
+                        span {
+                            color:White;
+                            font-weight: 700;
+                        }
+                    }
+    
+                    .progress {
+                        margin-top:10px;
+                        background-color: rgb(0, 137, 250);
+                        padding:0;
+                        padding:0 !important;
+                        height:10px;
+
+                        img {
+                            height:40px !important;
+                            left:-10px;
+                            position: absolute;
+                            background-color: transparent;
+                            z-index:2;
+                        }
+
+                        span {
+                            left:5px;
+                            position: absolute;
+                            z-index:3;
+                            margin-top:4px;
+                            font-size:15px;
+                            font-family: $d;
+                            color:black;
+                        }
+                        
+                        .progress-bar {
+                            height:100%;
+                            background-color: rgb(0, 87, 187);
+                        }
+                    }
+                }
+            }
+
+            &.logo {
+                img {
+                    height:140px;
+                    display: block;
+                    margin:0 auto;
+                }
+            }
+
+            &.settings {
+                display: flex;
+                justify-content: center;
+
+                button {
+                    margin:0 5px;
+                    background-color: rgb(0, 150, 236);
+                    border:none;
+                    padding:5px;
+                    border-radius: 10px;
+                    box-shadow: 4px 4px 0px 0px rgb(0, 75, 189);
+
+                    &:hover {
+                        background-color: rgb(0, 83, 236);
+                        box-shadow: 4px 4px 0px 0px rgb(0, 39, 99);
+                    }
+
+                    img {
+                        width:30px;
+                    }
+                }
+            }
+        }
+    }
+
+    .header-bottom {
+        position: relative;
+        display: flex;
+        justify-content: space-evenly;
+        padding-bottom:10px;
+        margin-top:15px;
+
+        button {
+            min-width: 16%;
+            width:fit-content;
+            margin:0 10px;
+            height:40px;
+            border-radius: 10px;
+            color:white;
+            font-family:$d;
+            font-size:22px;
+            background-color: rgb(0, 181, 253);
+            box-shadow: 4px 4px 0px 0px rgb(0, 60, 100);
+            border:2px solid black;
+
+            &.middle-button {
+                color:black;
+                width: 100%;
+                background-color: rgb(255, 217, 0);
+
+                &:hover {
+                    background-color: rgb(255, 174, 0);
+                }
+            }
+
+            &:hover {
+                background-color: rgb(0, 127, 247);
+                box-shadow: 4px 4px 0px 0px rgb(0, 34, 56);
+            }
+        }
+    }
+}
+
+//Main
+.main-container {
+    padding:0;
+}
+.main {
+    .create-game {
+        position: relative;
+        background-image: url("../images/morocco.png");
+        height:70px;
+        width: 100%;
+        border:3px solid black;
+        border-bottom: none;
+
+        .hide-button {
+            position: absolute;
+            background-color: #fff;
+            width:fit-content;
+            border-radius: 100%;
+            border:3px solid black;
+            height:40px;
+            width:40px;
+            top:15px;
+            right:10px;
+            z-index: 2;
+            display: none;
+
+            &.hide-left {
+                left:10px;
+            }
+    
+            svg {
+                width:100%;
+            }
+        }
+
+        > div {
+            width:100%;
+            height:100%;
+            background-color: rgba(128, 0, 107, 0.801);
+            display: flex;
+            justify-content: center;
+
+            button {
+                height:fit-content;
+                margin:0 10px;
+                position: relative;
+                top:50%;
+                transform: translateY(-50%);
+                margin-left:10px;
+                font-size:30px;
+                background-color: rgb(194, 0, 253);
+                box-shadow: 4px 4px 0px 0px rgb(43, 0, 100);
+                font-family: $d;
+                color:White;
+                padding:0 20px;
+                border-radius: 10px;
+                border:2px solid black;
+
+                &:hover {
+                    background-color: rgb(159, 0, 207);
+                }
+            }
+
+            .room-name {
+                background-color: rgb(235, 0, 176);
+                
+                &:hover {
+                    background-color: rgb(235, 0, 176);
+                }
+            }
+        }
+    }
+
+    .announcement {
+        background-color: rgb(140, 0, 158);
+        height:25px;
+        border:3px solid #000;
+        border-bottom:none;
+
+        marquee {
+            color:White;
+            font-family:$l;
+        }
+    }
+
+    .tables {
+        border:3px solid rgb(0, 0, 0);
+        height: 580px;
+        background-color: rgb(231, 231, 231);
+        overflow-y: auto;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap:20px;
+        padding:20px;
+
+        .bottom-menu {
+            display: none;
+            position: absolute;
+            height:50px;
+            width:100%;
+            bottom:0;
+            left:0;
+            border-left:3px solid black;
+            border-right:3px solid black;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            padding:5px 5px 10px 5px;
+            z-index:4;
+            
+            button {
+                margin:0 5px;
+                background-color: rgb(0, 150, 236);
+                border:none;
+                padding:5px;
+                border-radius: 10px;
+                box-shadow: 4px 4px 0px 0px rgb(0, 75, 189);
+
+                img {
+                    width:25px;
+                    height:25px;
+                }
+            }
+        }
+
+        .mobile-table-container {
+            display: none;
+            flex-direction: column;
+
+            .mobile-table {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                background-image:linear-gradient(to bottom, #baeef0, #87e1e4a8);
+                padding:10px 5px;
+
+                h3 {
+                    font-size:20px;
+                    font-family: $d;
+                }
+
+                p {
+                    font-size:12px;
+                    margin-bottom:0;
+
+                    img {
+                        height:30px;
+                        margin-left:20px;
+                    }
+                }
+            }
+
+            .settings-mobile {
+                display: flex;
+                justify-content: center;
+                position: absolute;
+                bottom:0;
+                left:0;
+                right:0;
+
+                button {
+                    margin:0 5px;
+                    background-color: rgb(0, 150, 236);
+                    border:none;
+                    padding:5px;
+                    border-radius: 10px;
+                    box-shadow: 4px 4px 0px 0px rgb(0, 75, 189);
+
+                    &:hover {
+                        background-color: rgb(0, 83, 236);
+                        box-shadow: 4px 4px 0px 0px rgb(0, 39, 99);
+                    }
+
+                    img {
+                        width:30px;
+                    }
+                }
+            }
+
+            .settings-mobile {
+                display: none;
+            }
+        }
+
+        .table {
+            min-height:400px;
+            margin-bottom:0;
+            border:6px solid rgb(85, 34, 0);
+            border-radius: 10px;
+            background-color: rgb(11,64,51);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: 100% 30%;
+            background-image: url("../images/table.png");
+            box-shadow: 0px 13px 0px 0px rgb(59, 24, 0);
+
+            .table-content {
+                position: relative;
+                width:100%;
+                height:100%;
+                background-color: rgba(0,0,0,0.4);
+
+                > button {
+                    background-color: rgb(255, 153, 0);
+                    font-size:25px;
+                    color:white;
+                    font-family: $y;
+                    border-radius: 10px;
+                    border:none;
+                    box-shadow: 4px 4px 0px 0px rgb(100, 53, 0);
+                    width:100px;
+                    position: absolute;
+
+                    &:hover {
+                        background-color: rgb(255, 115, 0);
+                    }
+                }
+
+                .play-button-top {
+                    top:60px;
+                    left:0;
+                    right:0;
+                    margin:auto;
+                }
+                .play-button-down {
+                    bottom:160px;
+                    left:0;
+                    right:0;
+                    margin:auto;
+                }
+                .play-button-left {
+                    left:20px;
+                    top:50%;
+                    transform: translateY(-50%);
+                    margin-top:-70px;
+                }
+                .play-button-right {
+                    right:20px;
+                    top:50%;
+                    transform: translateY(-50%);
+                    margin-top:-70px;
+                }
+
+                .table-price {
+                    position: absolute;
+                    transform: translateY(-50%);
+                    top:50%;
+                    color:white;
+                    left:0;
+                    right:0;
+                    margin:auto;
+                    width: fit-content;
+                    margin-top:-50px;
+                    font-family: $d;
+                    font-size:24px;
+
+                    img {
+                        width:30px;
+                        margin-left:10px;
+                    }
+                }
+
+                .table-features {
+                    position: absolute;
+                    width: 100%;
+                    bottom:0;
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: space-evenly;
+
+                    h5 {
+                        width: fit-content;
+                        padding:10px 15px;
+                        border-radius: 15px;
+                        background-color: rgba(77, 77, 77, 0.493);
+                        display: inline-block;
+                        color:white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.chat-container {
+    height:250px;
+    border:3px solid black;
+    border-top:none;
+    border-radius: 0 0 20px 20px;
+    margin-bottom:50px;
+    background-color: #fff;
+    position: relative;
+    padding:0;
+    z-index:3;
+
+    .text-container {
+        border-top:1px solid rgb(231, 231, 231);
+        padding:0 0 0 5px;
+        height:40px;
+        width: 100%;
+        position: absolute;
+        bottom:0;
+        
+        input {
+            margin-top:5px;
+            width: calc(100% - 60px);
+            display: inline-block;
+            border-radius:20px 0 0 20px;
+            border:none;
+            padding:2px 10px;
+            box-shadow: 0px 0px 2px 2px #c7c7c7;
+        
+            &:focus {
+                outline:none !important;
+            }
+        }
+
+        .send-message {
+            cursor: pointer;
+            margin-left:5px;
+            width:30px;
+            display: inline-block;
+        }
+    }
+
+    .messages {
+        height:calc(100% - 45px);
+        overflow-y: auto;
+
+        .message {
+            padding:5px 10px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+            img {
+                width:40px;
+                border-radius: 100%;
+                border:2px solid rgba(46, 78, 114, 0.445);
+            }
+
+            p {
+                font-family: $l;
+                font-weight: bold;
+                margin:0 10px;
+            }
+
+            &:nth-child(even) {
+                background-color: rgb(223, 223, 223);
+            }
+            &:nth-child(odd) {
+                background-color: rgb(245, 245, 245);
+            }
+
+            &.message-from-user {
+                justify-content: flex-end;
+            }
+        }
+    }
+}
+
+//Scrollbar
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: rgb(231, 231, 231);
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+@import 'responsive.scss';
