@@ -336,6 +336,6 @@
     <script src="js/hide-menu.js"></script>
     <script src="js/chat.js"></script>
     <script src="js/resolution.js"></script>
-    <script src="js/emoji.js"></script>
+    <script src="js/emoji.js?v=2"></script>
 </body>
 </html>
