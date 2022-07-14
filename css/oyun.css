@@ -40,6 +40,42 @@
 .main .tables .game-container .player img {
   width: 90%;
 }
+.main .tables .game-container .coin-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #191b2c;
+  border-radius: 0 0 8px 0;
+  width: fit-content;
+  padding: 4px 6px;
+  box-shadow: inset 5px 5px 15px 5px rgba(0, 0, 0, 0.43);
+}
+.main .tables .game-container .coin-container img {
+  height: 30px;
+}
+.main .tables .game-container .coin-container span {
+  margin: 0 30px;
+  font-family: "Roboto Condensed", sans-serif;
+  color: white;
+}
+.main .tables .game-container .canak-container {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #191b2c;
+  border-radius: 0 0 0 8px;
+  width: fit-content;
+  padding: 4px 6px;
+  box-shadow: inset 5px 5px 15px 5px rgba(0, 0, 0, 0.43);
+}
+.main .tables .game-container .canak-container img {
+  height: 30px;
+}
+.main .tables .game-container .canak-container span {
+  margin: 0 30px;
+  font-family: "Roboto Condensed", sans-serif;
+  color: white;
+}
 .main .tables .game-container .other-players {
   position: relative;
   height: calc(100% - 220px);
@@ -149,6 +185,30 @@
   height: 100%;
 }
 
+.bottom-menu {
+  border-top: 3px solid black;
+}
+.bottom-menu .cifte-git, .bottom-menu .seri-git {
+  height: 90px;
+}
+
+.chat {
+  position: relative;
+}
+.chat .git-buttons {
+  position: absolute;
+  top: -60px;
+  width: fit-content;
+  z-index: 10;
+  left: -90px;
+  right: 0;
+  margin: auto;
+}
+.chat .git-buttons img {
+  height: 120px;
+  cursor: pointer;
+}
+
 .chat-container {
   border-radius: 0 0 0 20px;
 }
@@ -161,16 +221,20 @@
   border-bottom: 3px solid black;
   border-radius: 0 0 20px 0;
   background-color: whitesmoke;
+  position: relative;
 }
 .players-in-game h4 {
   margin-left: 10px;
 }
 .players-in-game .ingame-list {
   overflow-y: auto;
-  height: 200px;
+  height: 185px;
 }
 .players-in-game .ingame-list .user {
   padding: 15px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .players-in-game .ingame-list .user:nth-child(even) {
   background-color: #dfdfdf;
@@ -184,9 +248,10 @@
   border: 1px solid #cfcfcf;
 }
 .players-in-game .ingame-list .user > div {
-  display: inline-block;
-  vertical-align: middle;
-  height: fit-content;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 .players-in-game .ingame-list .user > div p {
   margin: 0;

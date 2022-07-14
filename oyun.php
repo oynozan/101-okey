@@ -7,8 +7,8 @@
     <title>101 Okey</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/main.css?v=3">
-    <link rel="stylesheet" href="css/oyun.css?v=3">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/oyun.css">
 </head>
 <body>
     <div class="container-fluid max-width-1920">
@@ -96,7 +96,17 @@
                                 <div class="background"></div>
                                 <div class="game-container">
 
+                                    <div class="coin-container">
+                                        <img src="images/game/puanicon2.png">
+                                        <span>900</span>
+                                    </div>
+                                    <div class="canak-container">
+                                        <span>0</span>
+                                        <img src="images/game/canakicon.png">
+                                    </div>
+
                                     <div class="other-players">
+
                                         <div class="okey-container"></div>
                                         <div class="okey-container"></div>
                                         <div class="okey-container"></div>
@@ -151,6 +161,8 @@
                                 <button class="chat-button"><img src="images/chat.png"></button>
                                 <button class="players-button"><img src="images/players-table.png"></button>
                                 <button class="chat-fullscreen-button"><img src="images/fullscreen.png"></button>
+                                <img src="images/game/cift-git.png" class="cifte-git">
+                                <img src="images/game/seri-git.png" class="seri-git">
                             </div>
                         </div>
                     </div>
@@ -236,6 +248,10 @@
                 </div>
 
                 <div class="row chat">
+                    <div class="git-buttons">
+                        <img src="images/game/cift-git.png" class="cifte-git">
+                        <img src="images/game/seri-git.png" class="seri-git">
+                    </div>
                     <div class="col-8 chat-container">
                         <div class="messages">
                             <div class="message">
@@ -271,6 +287,7 @@
                         </div>
                         <div class="text-container">
                             <input class="chat-input">
+                            <img src="images/emoji.png" class="emoji-menu">
                             <img src="images/send.png" class="send-message">
                         </div>
                     </div>
@@ -314,9 +331,11 @@
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@joeattardi/emoji-button@3.0.3/dist/index.min.js"></script>
     <script src="js/buttons.js"></script>
     <script src="js/hide-menu.js"></script>
     <script src="js/chat.js"></script>
     <script src="js/resolution.js"></script>
+    <script src="js/emoji.js"></script>
 </body>
 </html>

@@ -31,7 +31,7 @@ $(".chat-button").click(function() {
     } else {
         $(".players-in-game").hide();
         $(".chat").show();
-        $(".chat").css({"bottom": "48px"});
+        $(".chat").css({"bottom": "48px", "position": "absolute"});
     }
 });
 
@@ -44,7 +44,7 @@ $(".chat-fullscreen-button").click(function() {
     } else {
         $(".players-in-game").hide();
         $(".chat").show();
-        $(".chat").css({"bottom": "49px"});
+        $(".chat").css({"bottom": "49px", "position": "absolute"});
         $(".chat-container").css({"height": "calc(100vh - 49px)", "bottom": "0"});
     }
 });
@@ -58,7 +58,7 @@ $(".players-button").click(function() {
     } else {
         $(".chat-container").hide();
         $(".chat").show();
-        $(".chat").css({"bottom": "48px"});
+        $(".chat").css({"bottom": "48px", "position": "absolute"});
     }
 });
 

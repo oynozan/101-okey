@@ -62,7 +62,7 @@
 }
 
 @media only screen and (max-width: 1485px) {
-    .user {
+    .chat-container .user {
         > img {
             display: block !important;
             margin:0 auto !important;
@@ -186,7 +186,7 @@
             }
         }
     }
-
+    
     .side-menu {
         top:0;
         display: none;
@@ -242,6 +242,10 @@
         border-right:3px solid black;
         z-index: 10;
 
+        .git-buttons {
+            display: none;
+        }
+
         .chat-container, .players-in-game {
             border:none;
             border-top:3px solid black;
@@ -254,10 +258,6 @@
     .tables {
         height: calc(100vh - 295px) !important;
         padding:5px !important;
-
-        /*.table {
-            display: none;
-        }*/
     }
 
     .bottom-menu {
@@ -446,6 +446,19 @@
 
 @media only screen and (max-width: 415px) {
     .game-container {
+        .coin-container, .canak-container {
+            padding:0 !important;
+            font-size:14px !important;
+
+            img {
+                height: 20px !important;
+            }
+
+            span {
+                margin:0 10px !important;
+            }
+        }
+
         .other-players {
             .other-player {
                 padding:3px !important;

@@ -358,6 +358,7 @@
                         </div>
                         <div class="text-container">
                             <input class="chat-input">
+                            <img src="images/emoji.png" class="emoji-menu">
                             <img src="images/send.png" class="send-message">
                         </div>
                     </div>
@@ -368,9 +369,11 @@
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@joeattardi/emoji-button@3.0.3/dist/index.min.js"></script>
     <script src="js/buttons.js"></script>
     <script src="js/hide-menu.js"></script>
     <script src="js/chat.js"></script>
     <script src="js/resolution.js"></script>
+    <script src="js/emoji.js"></script>
 </body>
 </html>
