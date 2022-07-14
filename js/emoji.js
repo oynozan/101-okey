@@ -1,5 +1,5 @@
 const emojiButtonEl = document.querySelector('.emoji-menu');
-const picker = new EmojiButton({position:"top"});
+const picker = new EmojiButton({position:"left"});
 
 emojiButtonEl.addEventListener('click', () => {
     picker.togglePicker(emojiButtonEl);
