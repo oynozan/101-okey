@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Yantramanav:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden !important;
+  background-image: url("../images/okey-background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.max-width-1920 {
+  max-width: 1920px;
+}
+
+.background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: -10;
+  background-color: rgba(3, 81, 184, 0.459);
+}
+
+.container-fluid {
+  margin-top: 0;
+  height: calc(100vh * (1 / 0.8));
+}
+
+.mobile-form-container {
+  display: none;
+}
+.mobile-form-container .login-container {
+  border-right: 0 !important;
+  display: none;
+}
+.mobile-form-container .form-container {
+  height: 90%;
+}
+.mobile-form-container .form-container .forgot-password {
+  margin-top: 10px;
+}
+.mobile-form-container .form-container h1 {
+  font-size: 50px;
+  margin-bottom: 40px;
+}
+.mobile-form-container .form-container p {
+  text-align: center;
+  font-size: 20px;
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+}
+.mobile-form-container .form-container p a {
+  margin: 0;
+}
+.mobile-form-container .form-container form input {
+  width: 80%;
+}
+
+.form-container {
+  background-color: white;
+  border-radius: 30px;
+  padding: 30px 20px;
+}
+.form-container .button-menu {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+  border-bottom: 4px solid rgba(224, 224, 224, 0.445);
+}
+.form-container .button-menu button {
+  background-color: transparent;
+  border: none;
+  margin: 0 30px;
+  font-family: "Lato", sans-serif;
+}
+.form-container .login-container {
+  padding-top: 30px;
+  border-right: 4px solid rgba(224, 224, 224, 0.445);
+}
+.form-container .register-container {
+  padding-top: 30px;
+}
+.form-container form h1, .form-container form > a {
+  text-align: center;
+  width: 100%;
+  display: block;
+}
+.form-container form h1 {
+  font-family: "Roboto Condensed", sans-serif;
+}
+.form-container form a {
+  cursor: pointer;
+  margin-top: 50px;
+  text-decoration: none;
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  color: #016dfa;
+}
+.form-container form input {
+  display: block;
+  margin: 20px auto;
+  width: 70%;
+  border-radius: 6px;
+  padding: 15px 20px;
+  border: none;
+  background-color: #f3f3f3;
+  font-size: 20px;
+  font-family: "Lato", sans-serif;
+}
+.form-container form input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+}
+.form-container form input[type=submit]:hover {
+  background-color: #257c28;
+}
+
+@media only screen and (max-width: 1199px) {
+  .container-fluid {
+    height: 100vh;
+  }
+
+  .desktop-form-container {
+    display: none;
+  }
+
+  .mobile-form-container {
+    display: block;
+  }
+}
+
+/*# sourceMappingURL=login.css.map */

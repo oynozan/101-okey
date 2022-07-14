@@ -137,6 +137,18 @@
         overflow-y: hidden;
     }
 
+    .game-container {
+        .player {
+            img {
+                width:70% !important;
+            }
+        }
+
+        .other-players {
+            height:calc(100% - 190px) !important;
+        }
+    }
+
     .tables {
         grid-template-columns: auto !important;
 
@@ -228,8 +240,9 @@
         left:12px;
         border-left:3px solid black;
         border-right:3px solid black;
+        z-index: 10;
 
-        .chat-container {
+        .chat-container, .players-in-game {
             border:none;
             border-top:3px solid black;
             border-radius: 0;
@@ -250,12 +263,6 @@
     .bottom-menu {
         display: flex !important;
     }
-}
-
-@media only screen and (max-width: 991px) {
-    /*.mobile-table-container {
-        display: flex !important;
-    }*/
 }
 
 @media only screen and (max-width: 842px) {
@@ -297,6 +304,18 @@
     .header-top {
         height:100px !important;
     }
+
+    .game-container {
+        .player {
+            img {
+                width:85% !important;
+            }
+        }
+
+        .other-players {
+            height:calc(100% - 140px) !important;
+        }
+    }
 }
 
 @media only screen and (max-width: 592px) {
@@ -324,6 +343,52 @@
 
     .settings {
         width:100px !important;
+    }
+}
+
+@media only screen and (max-width: 523px) {
+    .tables {
+        padding:0 !important;
+    }
+
+    .game-container {
+        .player {
+            img {
+                width:100% !important;
+            }
+        }
+
+        .other-players {
+            height:calc(100% - 140px) !important;
+            width:100% !important;
+
+            .other-player {
+                &.first-player {
+                    top:0 !important;
+                }
+                &.second-player {
+                    left:0 !important;
+                }
+                &.third-player {
+                    bottom:0 !important;
+                }
+                &.fourth-player {
+                    right:0 !important;
+                }
+            } 
+
+            .okey-container {
+                height:80px !important;
+                width:48px !important;
+            }
+
+            .middle-okey-container {
+                .middle-okey {
+                    height:80px !important;
+                    width:48px !important;
+                }
+            }
+        }
     }
 }
 
@@ -363,6 +428,47 @@
     .header {
         .profile {
             width: 600px !important;
+        }
+    }
+
+    .game-container {
+        .player {
+            img {
+                width:100% !important;
+            }
+        }
+
+        .other-players {
+            height:calc(100% - 120px) !important;
+        }
+    }
+}
+
+@media only screen and (max-width: 415px) {
+    .game-container {
+        .other-players {
+            .other-player {
+                padding:3px !important;
+                font-size:12px !important;
+
+                .score {
+                    font-size:14px !important;
+                }
+
+                img {
+                    height:30px !important;
+                }
+            }
+            .okey-container {
+                height:50px !important;
+                width:30px !important;
+            }
+            .middle-okey-container {
+                .middle-okey {
+                    height:50px !important;
+                    width:30px !important;
+                }
+            }
         }
     }
 }

@@ -24,10 +24,12 @@ function addChatMessage () {
 
 $(".chat-button").click(function() {
     if ($(".chat").css("display") != "none") {
+        $(".players-in-game").show();
         $(".chat").hide();
         $(".chat-container").removeAttr("style");
         $(".chat").removeAttr("style");
     } else {
+        $(".players-in-game").hide();
         $(".chat").show();
         $(".chat").css({"bottom": "48px"});
     }
@@ -35,13 +37,28 @@ $(".chat-button").click(function() {
 
 $(".chat-fullscreen-button").click(function() {
     if ($(".chat").css("display") != "none") {
+        $(".players-in-game").show();
         $(".chat").hide();
         $(".chat-container").removeAttr("style");
         $(".chat").removeAttr("style");
     } else {
+        $(".players-in-game").hide();
         $(".chat").show();
         $(".chat").css({"bottom": "49px"});
         $(".chat-container").css({"height": "calc(100vh - 49px)", "bottom": "0"});
+    }
+});
+
+$(".players-button").click(function() {
+    if ($(".chat").css("display") != "none") {
+        $(".chat-container").show();
+        $(".players-in-game").removeAttr();
+        $(".chat").hide();
+        $(".chat").removeAttr("style");
+    } else {
+        $(".chat-container").hide();
+        $(".chat").show();
+        $(".chat").css({"bottom": "48px"});
     }
 });
 

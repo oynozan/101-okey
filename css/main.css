@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Dosis:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Yantramanav:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
 body {
   margin: 0;
   padding: 0;
@@ -14,6 +15,16 @@ body {
 
 .container-fluid {
   margin-top: 50px;
+}
+
+.background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: -10;
+  background-color: rgba(3, 81, 184, 0.459);
 }
 
 .side-menu-container {
@@ -356,17 +367,66 @@ body {
   color: White;
   font-family: "Lato", sans-serif;
 }
-.main .tables {
-  border: 3px solid black;
-  height: 580px;
-  background-color: #e7e7e7;
+.main .oda-sec-container {
+  display: none;
+  flex-direction: column;
+  background-color: rgba(9, 72, 155, 0.527);
   overflow-y: auto;
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-gap: 20px;
-  padding: 20px;
+  height: 580px;
+  border: 3px solid black;
+  padding: 3px 0;
 }
-.main .tables .bottom-menu {
+.main .oda-sec-container .oda {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-image: linear-gradient(to bottom, #cacaca 50%, #dfdfdf 50%);
+  margin: 3px 6px;
+  border-radius: 7px;
+  padding: 20px 5px;
+}
+.main .oda-sec-container .oda h3 {
+  font-size: 20px;
+  font-family: "Dosis", sans-serif;
+  margin-bottom: 0;
+}
+.main .oda-sec-container .oda p {
+  font-size: 17px;
+  margin-bottom: 0;
+  font-family: "Yantramanav", sans-serif;
+}
+.main .oda-sec-container .oda p img {
+  height: 30px;
+  margin-left: 20px;
+}
+.main .oda-sec-container .settings-mobile {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.main .oda-sec-container .settings-mobile button {
+  margin: 0 5px;
+  background-color: #0096ec;
+  border: none;
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 0px 0px #004bbd;
+}
+.main .oda-sec-container .settings-mobile button:hover {
+  background-color: #0053ec;
+  box-shadow: 4px 4px 0px 0px #002763;
+}
+.main .oda-sec-container .settings-mobile button img {
+  width: 30px;
+}
+.main .oda-sec-container .settings-mobile {
+  display: none;
+}
+.main .bottom-menu {
   display: none;
   position: absolute;
   height: 50px;
@@ -381,7 +441,7 @@ body {
   padding: 5px 5px 10px 5px;
   z-index: 4;
 }
-.main .tables .bottom-menu button {
+.main .bottom-menu button {
   margin: 0 5px;
   background-color: #0096ec;
   border: none;
@@ -389,59 +449,19 @@ body {
   border-radius: 10px;
   box-shadow: 4px 4px 0px 0px #004bbd;
 }
-.main .tables .bottom-menu button img {
+.main .bottom-menu button img {
   width: 25px;
   height: 25px;
 }
-.main .tables .mobile-table-container {
-  display: none;
-  flex-direction: column;
-}
-.main .tables .mobile-table-container .mobile-table {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  background-image: linear-gradient(to bottom, #baeef0, #87e1e4a8);
-  padding: 10px 5px;
-}
-.main .tables .mobile-table-container .mobile-table h3 {
-  font-size: 20px;
-  font-family: "Dosis", sans-serif;
-}
-.main .tables .mobile-table-container .mobile-table p {
-  font-size: 12px;
-  margin-bottom: 0;
-}
-.main .tables .mobile-table-container .mobile-table p img {
-  height: 30px;
-  margin-left: 20px;
-}
-.main .tables .mobile-table-container .settings-mobile {
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-.main .tables .mobile-table-container .settings-mobile button {
-  margin: 0 5px;
-  background-color: #0096ec;
-  border: none;
-  padding: 5px;
-  border-radius: 10px;
-  box-shadow: 4px 4px 0px 0px #004bbd;
-}
-.main .tables .mobile-table-container .settings-mobile button:hover {
-  background-color: #0053ec;
-  box-shadow: 4px 4px 0px 0px #002763;
-}
-.main .tables .mobile-table-container .settings-mobile button img {
-  width: 30px;
-}
-.main .tables .mobile-table-container .settings-mobile {
-  display: none;
+.main .tables {
+  border: 3px solid black;
+  height: 580px;
+  background-color: #e7e7e7;
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 20px;
+  padding: 20px;
 }
 .main .tables .table {
   min-height: 400px;
@@ -731,6 +751,13 @@ body {
     overflow-y: hidden;
   }
 
+  .game-container .player img {
+    width: 70% !important;
+  }
+  .game-container .other-players {
+    height: calc(100% - 190px) !important;
+  }
+
   .tables {
     grid-template-columns: auto !important;
   }
@@ -812,8 +839,9 @@ body {
     left: 12px;
     border-left: 3px solid black;
     border-right: 3px solid black;
+    z-index: 10;
   }
-  .chat .chat-container {
+  .chat .chat-container, .chat .players-in-game {
     border: none;
     border-top: 3px solid black;
     border-radius: 0;
@@ -832,11 +860,6 @@ body {
   .bottom-menu {
     display: flex !important;
   }
-}
-@media only screen and (max-width: 991px) {
-  /*.mobile-table-container {
-      display: flex !important;
-  }*/
 }
 @media only screen and (max-width: 842px) {
   .create-game button {
@@ -870,6 +893,13 @@ body {
   .header-top {
     height: 100px !important;
   }
+
+  .game-container .player img {
+    width: 85% !important;
+  }
+  .game-container .other-players {
+    height: calc(100% - 140px) !important;
+  }
 }
 @media only screen and (max-width: 592px) {
   .header-bottom button {
@@ -893,6 +923,39 @@ body {
 
   .settings {
     width: 100px !important;
+  }
+}
+@media only screen and (max-width: 523px) {
+  .tables {
+    padding: 0 !important;
+  }
+
+  .game-container .player img {
+    width: 100% !important;
+  }
+  .game-container .other-players {
+    height: calc(100% - 140px) !important;
+    width: 100% !important;
+  }
+  .game-container .other-players .other-player.first-player {
+    top: 0 !important;
+  }
+  .game-container .other-players .other-player.second-player {
+    left: 0 !important;
+  }
+  .game-container .other-players .other-player.third-player {
+    bottom: 0 !important;
+  }
+  .game-container .other-players .other-player.fourth-player {
+    right: 0 !important;
+  }
+  .game-container .other-players .okey-container {
+    height: 80px !important;
+    width: 48px !important;
+  }
+  .game-container .other-players .middle-okey-container .middle-okey {
+    height: 80px !important;
+    width: 48px !important;
   }
 }
 @media only screen and (max-width: 482px) {
@@ -925,6 +988,33 @@ body {
 
   .header .profile {
     width: 600px !important;
+  }
+
+  .game-container .player img {
+    width: 100% !important;
+  }
+  .game-container .other-players {
+    height: calc(100% - 120px) !important;
+  }
+}
+@media only screen and (max-width: 415px) {
+  .game-container .other-players .other-player {
+    padding: 3px !important;
+    font-size: 12px !important;
+  }
+  .game-container .other-players .other-player .score {
+    font-size: 14px !important;
+  }
+  .game-container .other-players .other-player img {
+    height: 30px !important;
+  }
+  .game-container .other-players .okey-container {
+    height: 50px !important;
+    width: 30px !important;
+  }
+  .game-container .other-players .middle-okey-container .middle-okey {
+    height: 50px !important;
+    width: 30px !important;
   }
 }
 @media only screen and (max-width: 361px) {
