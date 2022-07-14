@@ -850,7 +850,7 @@ body {
   }
 
   .tables {
-    height: calc(100vh - 245px) !important;
+    height: calc(100vh - 295px) !important;
     padding: 5px !important;
     /*.table {
         display: none;
