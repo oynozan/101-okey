@@ -935,6 +935,10 @@ body {
   .game-container .other-players {
     height: calc(100% - 140px) !important;
   }
+
+  .tables {
+    height: calc(100vh - 345px) !important;
+  }
 }
 @media only screen and (max-width: 592px) {
   .header-bottom button {
