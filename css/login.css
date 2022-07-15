@@ -131,6 +131,14 @@ body {
   .mobile-form-container {
     display: block;
   }
+
+  .button-menu-container .button-menu {
+    justify-content: space-around;
+  }
+  .button-menu-container .button-menu button {
+    margin: 0 5px;
+    font-size: 11px !important;
+  }
 }
 
 /*# sourceMappingURL=login.css.map */

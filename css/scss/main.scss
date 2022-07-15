@@ -420,72 +420,92 @@ body {
         }
     }
 
-    .oda-sec-container {
-        display: none;
-        flex-direction: column;
-        background-color: rgba(9, 72, 155, 0.527);
+    .oda-container {
         overflow-y: auto;
         height:580px;
+        display: none;
+        background-color: rgba(9, 72, 155, 0.527);
         border:3px solid black;
-        padding:3px 0;
+        padding:0 4px;
+        width: 100%;
 
-        .oda {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            background-image:linear-gradient(to bottom, rgb(202,202,202) 50%, rgb(223,223,223) 50%);
-            margin:3px 6px;
-            border-radius:7px;
-            padding:20px 5px;
-
-            h3 {
-                font-size:20px;
-                font-family: $d;
-                margin-bottom:0;
-            }
-
-            p {
-                font-size:17px;
-                margin-bottom:0;
-                font-family:$y;
-
-                img {
-                    height:30px;
-                    margin-left:20px;
+        .oda-sec-container {
+            border-collapse: separate;
+            border-spacing: 0 6px;
+            width: 100%;
+            display: table;
+    
+            .oda {
+                display: table-row;
+                background-image:linear-gradient(to bottom, rgb(202,202,202) 50%, rgb(223,223,223) 50%);
+                margin:3px 10px;
+                width: 100%;
+    
+                &.oda-title {
+                    background-image:url('../images/oda-title.png');
+                    text-transform: uppercase;
+                }
+    
+                > * {
+                    display: table-cell;
+                    padding:20px 5px;
+    
+                    &:first-child {
+                        border-radius:7px 0 0 7px;
+                    }
+                    &:last-child {
+                        border-radius:0 7px 7px 0;
+                    }
+                }
+    
+                h3 {
+                    font-size:20px;
+                    font-family: $d;
+                    margin-bottom:0;
+                }
+    
+                p {
+                    font-size:17px;
+                    margin-bottom:0;
+                    font-family:$y;
+    
+                    img {
+                        height:30px;
+                        margin-left:10px;
+                    }
                 }
             }
-        }
-
-        .settings-mobile {
-            display: flex;
-            justify-content: center;
-            position: absolute;
-            bottom:0;
-            left:0;
-            right:0;
-
-            button {
-                margin:0 5px;
-                background-color: rgb(0, 150, 236);
-                border:none;
-                padding:5px;
-                border-radius: 10px;
-                box-shadow: 4px 4px 0px 0px rgb(0, 75, 189);
-
-                &:hover {
-                    background-color: rgb(0, 83, 236);
-                    box-shadow: 4px 4px 0px 0px rgb(0, 39, 99);
-                }
-
-                img {
-                    width:30px;
+    
+            .settings-mobile {
+                display: flex;
+                justify-content: center;
+                position: absolute;
+                bottom:0;
+                left:0;
+                right:0;
+    
+                button {
+                    margin:0 5px;
+                    background-color: rgb(0, 150, 236);
+                    border:none;
+                    padding:5px;
+                    border-radius: 10px;
+                    box-shadow: 4px 4px 0px 0px rgb(0, 75, 189);
+    
+                    &:hover {
+                        background-color: rgb(0, 83, 236);
+                        box-shadow: 4px 4px 0px 0px rgb(0, 39, 99);
+                    }
+    
+                    img {
+                        width:30px;
+                    }
                 }
             }
-        }
-
-        .settings-mobile {
-            display: none;
+    
+            .settings-mobile {
+                display: none;
+            }
         }
     }
 

@@ -198,46 +198,74 @@
                                 </div>
                             </div>
 
-                            <div class="oda-sec-container">
-                                <div class="oda">
-                                    <h3>YENİ BAŞLAYANLAR</h3>
-                                    <p>750-4.999 ÇİP <img src="images/users.png"></p>
-                                </div>
-                                <div class="oda">
-                                    <h3>MUHABBETÇİLER</h3>
-                                    <p>750-4.999 ÇİP <img src="images/users.png"></p>
-                                </div>
-                                <div class="oda">
-                                    <h3>MİLYONERLER</h3>
-                                    <p>750-4.999 ÇİP <img src="images/users.png"></p>
-                                </div>
-                                <div class="oda">
-                                    <h3>YENİ BAŞLAYANLAR</h3>
-                                    <p>750-4.999 ÇİP <img src="images/users.png"></p>
-                                </div>
-                                <div class="oda">
-                                    <h3>YENİ BAŞLAYANLAR</h3>
-                                    <p>750-4.999 ÇİP <img src="images/users.png"></p>
-                                </div>
-                                <div class="oda">
-                                    <h3>YENİ BAŞLAYANLAR</h3>
-                                    <p>750-4.999 ÇİP <img src="images/users.png"></p>
-                                </div>
-                                <div class="oda">
-                                    <h3>YENİ BAŞLAYANLAR</h3>
-                                    <p>750-4.999 ÇİP <img src="images/users.png"></p>
-                                </div>
-                                <div class="oda">
-                                    <h3>YENİ BAŞLAYANLAR</h3>
-                                    <p>750-4.999 ÇİP <img src="images/users.png"></p>
-                                </div>
-                                <div class="oda">
-                                    <h3>YENİ BAŞLAYANLAR</h3>
-                                    <p>750-4.999 ÇİP <img src="images/users.png"></p>
-                                </div>
-                                <div class="oda">
-                                    <h3>YENİ BAŞLAYANLAR</h3>
-                                    <p>750-4.999 ÇİP <img src="images/users.png"></p>
+                            <div class="oda-container">
+                                <div class="oda-sec-container">
+                                    <div class="oda oda-title">
+                                        <h3>Oda</h3>
+                                        <h3>Oynayan</h3>
+                                        <h3>Min. Giriş</h3>
+                                        <h3>Bahis Aralığı</h3>
+                                    </div>
+                                    <div class="oda">
+                                        <h3>YENİ BAŞLAYANLAR</h3>
+                                        <p>5 <img src="images/users.png"></p>
+                                        <p>40.000</p>
+                                        <p>750-4.999 ÇİP</p>
+                                    </div>
+                                    <div class="oda">
+                                        <h3>YENİ BAŞLAYANLAR</h3>
+                                        <p>5 <img src="images/users.png"></p>
+                                        <p>40.000</p>
+                                        <p>750-4.999 ÇİP</p>
+                                    </div>
+                                    <div class="oda">
+                                        <h3>YENİ BAŞLAYANLAR</h3>
+                                        <p>5 <img src="images/users.png"></p>
+                                        <p>40.000</p>
+                                        <p>750-4.999 ÇİP</p>
+                                    </div>
+                                    <div class="oda">
+                                        <h3>YENİ BAŞLAYANLAR</h3>
+                                        <p>5 <img src="images/users.png"></p>
+                                        <p>40.000</p>
+                                        <p>750-4.999 ÇİP</p>
+                                    </div>
+                                    <div class="oda">
+                                        <h3>YENİ BAŞLAYANLAR</h3>
+                                        <p>5 <img src="images/users.png"></p>
+                                        <p>40.000</p>
+                                        <p>750-4.999 ÇİP</p>
+                                    </div>
+                                    <div class="oda">
+                                        <h3>YENİ BAŞLAYANLAR</h3>
+                                        <p>5 <img src="images/users.png"></p>
+                                        <p>40.000</p>
+                                        <p>750-4.999 ÇİP</p>
+                                    </div>
+                                    <div class="oda">
+                                        <h3>YENİ BAŞLAYANLAR</h3>
+                                        <p>5 <img src="images/users.png"></p>
+                                        <p>40.000</p>
+                                        <p>750-4.999 ÇİP</p>
+                                    </div>
+                                    <div class="oda">
+                                        <h3>YENİ BAŞLAYANLAR</h3>
+                                        <p>5 <img src="images/users.png"></p>
+                                        <p>40.000</p>
+                                        <p>750-4.999 ÇİP</p>
+                                    </div>
+                                    <div class="oda">
+                                        <h3>YENİ BAŞLAYANLAR</h3>
+                                        <p>5 <img src="images/users.png"></p>
+                                        <p>40.000</p>
+                                        <p>750-4.999 ÇİP</p>
+                                    </div>
+                                    <div class="oda">
+                                        <h3>YENİ BAŞLAYANLAR</h3>
+                                        <p>5 <img src="images/users.png"></p>
+                                        <p>40.000</p>
+                                        <p>750-4.999 ÇİP</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>

@@ -7,10 +7,11 @@
     <title>101 Okey</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/main.css?v=2">
-    <link rel="stylesheet" href="css/oyun.css?v=2">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/oyun.css">
 </head>
 <body>
+    <div class="background"></div>
     <div class="container-fluid max-width-1920">
         <div class="row">
             <div class="col-xl-2"></div>
@@ -49,6 +50,14 @@
                                 <button><img src="images/settings.png"></button>
                             </div>
                         </div>
+
+                        <div class="header-bottom">
+                            <button class="oda-sec-button">ODA SEÇ</button>
+                            <button>ARKADAŞLAR</button>
+                            <button class="middle-button">MASA OLUŞTUR</button>
+                            <button>SATIN AL</button>
+                            <button>EN İYİLER</button>
+                        </div>
                     </div>
                 </div>
 
@@ -71,7 +80,7 @@
                     </div>
                     <div class="col-12 col-xl-9 main-container">
                         <div class="main">
-                            <div class="create-game">
+                            <div class="create-game ingame-create-game">
                                 <button class="hide-button hide-left">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right" viewBox="0 0 16 16">
                                         <path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"/>
@@ -93,7 +102,6 @@
                             </div>
 
                             <div class="tables">
-                                <div class="background"></div>
                                 <div class="game-container">
 
                                     <div class="coin-container">
@@ -141,6 +149,11 @@
                                             </div>
                                         </div>
 
+                                        <div class="git-buttons">
+                                            <img src="images/game/cift-git.png" class="cifte-git">
+                                            <img src="images/game/seri-git.png" class="seri-git">
+                                        </div>
+
                                         <div class="middle-okey-container">
                                             <div class="middle-okey">
                                                 <img src="images/game/ki9.png">
@@ -163,6 +176,77 @@
                                 <button class="chat-fullscreen-button"><img src="images/fullscreen.png"></button>
                                 <img src="images/game/cift-git.png" class="cifte-git">
                                 <img src="images/game/seri-git.png" class="seri-git">
+                            </div>
+
+                            <div class="oda-container">
+                                <div class="oda-sec-container">
+                                    <div class="oda oda-title">
+                                        <h3>Oda</h3>
+                                        <h3>Oynayan</h3>
+                                        <h3>Min. Giriş</h3>
+                                        <h3>Bahis Aralığı</h3>
+                                    </div>
+                                    <div class="oda">
+                                        <h3>YENİ BAŞLAYANLAR</h3>
+                                        <p>5 <img src="images/users.png"></p>
+                                        <p>40.000</p>
+                                        <p>750-4.999 ÇİP</p>
+                                    </div>
+                                    <div class="oda">
+                                        <h3>YENİ BAŞLAYANLAR</h3>
+                                        <p>5 <img src="images/users.png"></p>
+                                        <p>40.000</p>
+                                        <p>750-4.999 ÇİP</p>
+                                    </div>
+                                    <div class="oda">
+                                        <h3>YENİ BAŞLAYANLAR</h3>
+                                        <p>5 <img src="images/users.png"></p>
+                                        <p>40.000</p>
+                                        <p>750-4.999 ÇİP</p>
+                                    </div>
+                                    <div class="oda">
+                                        <h3>YENİ BAŞLAYANLAR</h3>
+                                        <p>5 <img src="images/users.png"></p>
+                                        <p>40.000</p>
+                                        <p>750-4.999 ÇİP</p>
+                                    </div>
+                                    <div class="oda">
+                                        <h3>YENİ BAŞLAYANLAR</h3>
+                                        <p>5 <img src="images/users.png"></p>
+                                        <p>40.000</p>
+                                        <p>750-4.999 ÇİP</p>
+                                    </div>
+                                    <div class="oda">
+                                        <h3>YENİ BAŞLAYANLAR</h3>
+                                        <p>5 <img src="images/users.png"></p>
+                                        <p>40.000</p>
+                                        <p>750-4.999 ÇİP</p>
+                                    </div>
+                                    <div class="oda">
+                                        <h3>YENİ BAŞLAYANLAR</h3>
+                                        <p>5 <img src="images/users.png"></p>
+                                        <p>40.000</p>
+                                        <p>750-4.999 ÇİP</p>
+                                    </div>
+                                    <div class="oda">
+                                        <h3>YENİ BAŞLAYANLAR</h3>
+                                        <p>5 <img src="images/users.png"></p>
+                                        <p>40.000</p>
+                                        <p>750-4.999 ÇİP</p>
+                                    </div>
+                                    <div class="oda">
+                                        <h3>YENİ BAŞLAYANLAR</h3>
+                                        <p>5 <img src="images/users.png"></p>
+                                        <p>40.000</p>
+                                        <p>750-4.999 ÇİP</p>
+                                    </div>
+                                    <div class="oda">
+                                        <h3>YENİ BAŞLAYANLAR</h3>
+                                        <p>5 <img src="images/users.png"></p>
+                                        <p>40.000</p>
+                                        <p>750-4.999 ÇİP</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -248,10 +332,6 @@
                 </div>
 
                 <div class="row chat">
-                    <div class="git-buttons">
-                        <img src="images/game/cift-git.png" class="cifte-git">
-                        <img src="images/game/seri-git.png" class="seri-git">
-                    </div>
                     <div class="col-8 chat-container">
                         <div class="messages">
                             <div class="message">
@@ -332,10 +412,10 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@joeattardi/emoji-button@3.0.3/dist/index.min.js"></script>
-    <script src="js/buttons.js"></script>
+    <script src="js/buttons-game.js"></script>
     <script src="js/hide-menu.js"></script>
     <script src="js/chat.js"></script>
     <script src="js/resolution.js"></script>
-    <script src="js/emoji.js?v=2"></script>
+    <script src="js/emoji.js"></script>
 </body>
 </html>

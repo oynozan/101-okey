@@ -137,6 +137,18 @@
         overflow-y: hidden;
     }
 
+    .ingame-create-game {
+        height:50px !important;
+
+        .hide-button {
+            top:3px !important;
+        }
+
+        button {
+            font-size:20px !important;
+        }
+    }
+
     .game-container {
         .player {
             img {
@@ -144,8 +156,17 @@
             }
         }
 
+        .okey-container {
+            height:80px !important;
+            width:48px !important;
+        }
+
         .other-players {
             height:calc(100% - 190px) !important;
+        }
+
+        .cifte-git, .seri-git {
+            display: none !important;
         }
     }
 
@@ -186,7 +207,7 @@
             }
         }
     }
-    
+
     .side-menu {
         top:0;
         display: none;
@@ -242,10 +263,6 @@
         border-right:3px solid black;
         z-index: 10;
 
-        .git-buttons {
-            display: none;
-        }
-
         .chat-container, .players-in-game {
             border:none;
             border-top:3px solid black;
@@ -266,7 +283,7 @@
 }
 
 @media only screen and (max-width: 842px) {
-    .create-game {
+    .create-game, .ingame-create-game {
         button {
             font-size:20px !important;
         }
@@ -393,7 +410,7 @@
 }
 
 @media only screen and (max-width: 482px) {
-    .create-game {
+    .create-game, .ingame-create-game {
         button {
             font-size:14px !important;
             margin:0px 4px !important;

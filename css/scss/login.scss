@@ -153,4 +153,15 @@ body {
     .mobile-form-container {
         display: block;
     }
+
+    .button-menu-container {
+        .button-menu {
+            justify-content: space-around;
+
+            button {
+                margin:0 5px;
+                font-size:11px !important;
+            }
+        }
+    }
 }

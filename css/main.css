@@ -367,40 +367,56 @@ body {
   color: White;
   font-family: "Lato", sans-serif;
 }
-.main .oda-sec-container {
-  display: none;
-  flex-direction: column;
-  background-color: rgba(9, 72, 155, 0.527);
+.main .oda-container {
   overflow-y: auto;
   height: 580px;
+  display: none;
+  background-color: rgba(9, 72, 155, 0.527);
   border: 3px solid black;
-  padding: 3px 0;
+  padding: 0 4px;
+  width: 100%;
 }
-.main .oda-sec-container .oda {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+.main .oda-container .oda-sec-container {
+  border-collapse: separate;
+  border-spacing: 0 6px;
+  width: 100%;
+  display: table;
+}
+.main .oda-container .oda-sec-container .oda {
+  display: table-row;
   background-image: linear-gradient(to bottom, #cacaca 50%, #dfdfdf 50%);
-  margin: 3px 6px;
-  border-radius: 7px;
+  margin: 3px 10px;
+  width: 100%;
+}
+.main .oda-container .oda-sec-container .oda.oda-title {
+  background-image: url("../images/oda-title.png");
+  text-transform: uppercase;
+}
+.main .oda-container .oda-sec-container .oda > * {
+  display: table-cell;
   padding: 20px 5px;
 }
-.main .oda-sec-container .oda h3 {
+.main .oda-container .oda-sec-container .oda > *:first-child {
+  border-radius: 7px 0 0 7px;
+}
+.main .oda-container .oda-sec-container .oda > *:last-child {
+  border-radius: 0 7px 7px 0;
+}
+.main .oda-container .oda-sec-container .oda h3 {
   font-size: 20px;
   font-family: "Dosis", sans-serif;
   margin-bottom: 0;
 }
-.main .oda-sec-container .oda p {
+.main .oda-container .oda-sec-container .oda p {
   font-size: 17px;
   margin-bottom: 0;
   font-family: "Yantramanav", sans-serif;
 }
-.main .oda-sec-container .oda p img {
+.main .oda-container .oda-sec-container .oda p img {
   height: 30px;
-  margin-left: 20px;
+  margin-left: 10px;
 }
-.main .oda-sec-container .settings-mobile {
+.main .oda-container .oda-sec-container .settings-mobile {
   display: flex;
   justify-content: center;
   position: absolute;
@@ -408,7 +424,7 @@ body {
   left: 0;
   right: 0;
 }
-.main .oda-sec-container .settings-mobile button {
+.main .oda-container .oda-sec-container .settings-mobile button {
   margin: 0 5px;
   background-color: #0096ec;
   border: none;
@@ -416,14 +432,14 @@ body {
   border-radius: 10px;
   box-shadow: 4px 4px 0px 0px #004bbd;
 }
-.main .oda-sec-container .settings-mobile button:hover {
+.main .oda-container .oda-sec-container .settings-mobile button:hover {
   background-color: #0053ec;
   box-shadow: 4px 4px 0px 0px #002763;
 }
-.main .oda-sec-container .settings-mobile button img {
+.main .oda-container .oda-sec-container .settings-mobile button img {
   width: 30px;
 }
-.main .oda-sec-container .settings-mobile {
+.main .oda-container .oda-sec-container .settings-mobile {
   display: none;
 }
 .main .bottom-menu {
@@ -756,11 +772,28 @@ body {
     overflow-y: hidden;
   }
 
+  .ingame-create-game {
+    height: 50px !important;
+  }
+  .ingame-create-game .hide-button {
+    top: 3px !important;
+  }
+  .ingame-create-game button {
+    font-size: 20px !important;
+  }
+
   .game-container .player img {
     width: 70% !important;
   }
+  .game-container .okey-container {
+    height: 80px !important;
+    width: 48px !important;
+  }
   .game-container .other-players {
     height: calc(100% - 190px) !important;
+  }
+  .game-container .cifte-git, .game-container .seri-git {
+    display: none !important;
   }
 
   .tables {
@@ -846,9 +879,6 @@ body {
     border-right: 3px solid black;
     z-index: 10;
   }
-  .chat .git-buttons {
-    display: none;
-  }
   .chat .chat-container, .chat .players-in-game {
     border: none;
     border-top: 3px solid black;
@@ -867,7 +897,7 @@ body {
   }
 }
 @media only screen and (max-width: 842px) {
-  .create-game button {
+  .create-game button, .ingame-create-game button {
     font-size: 20px !important;
   }
 }
@@ -964,7 +994,7 @@ body {
   }
 }
 @media only screen and (max-width: 482px) {
-  .create-game button {
+  .create-game button, .ingame-create-game button {
     font-size: 14px !important;
     margin: 0px 4px !important;
   }

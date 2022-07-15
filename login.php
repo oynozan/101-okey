@@ -55,6 +55,16 @@
         <div class="row h-100">
             <div class="col-1"></div>
             <div class="col-10 my-auto form-container">
+                <div class="row button-menu-container">
+                    <div class="col-12">
+                        <div class="button-menu">
+                            <button>ANA SAYFA</button>
+                            <button>İLETİŞİM</button>
+                            <button>AYARLAR</button>
+                            <button>KULLANIM KOŞULLARI</button>
+                        </div>
+                    </div>
+                </div>
                 <div class="row h-100">
                     <div class="col-12 my-auto login-container">
                         <form class="login">
