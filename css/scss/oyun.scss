@@ -4,35 +4,6 @@
     height: 680px;
 }
 
-.expand-header {
-    display: none;
-    width: 100%;
-    height:20px;
-    background-color: rgb(23, 100, 178);
-    margin-top:-2px;
-
-    img {
-        display: block;
-        margin:0px auto;
-        transform: rotateZ(0deg);
-        padding-top:3px;
-    }
-}
-
-.narrow-header {
-    width: 100%;
-    height:20px;
-    background-color: rgb(23, 100, 178);
-    margin-top:-2px;
-
-    img {
-        padding-top:3px;
-        display: block;
-        margin:0px auto;
-        transform: rotateZ(180deg);
-    }
-}
-
 .main {
     .create-game > div button {
         background-color: red;
@@ -48,6 +19,7 @@
         position: relative;
         display: block;
         padding:0;
+        top:0;
     
         .game-container {
             position: relative;
@@ -206,9 +178,7 @@
             .cifte-git {
                 position: absolute;
                 bottom:-30px;
-                left:-400px;
-                right:0;
-                margin:auto;
+                left:70px;
                 z-index: 100;
                 height:80px;
                 cursor: pointer;
@@ -216,9 +186,7 @@
             .seri-git {
                 position: absolute;
                 bottom:-30px;
-                left:400px;
-                right:0;
-                margin:auto;
+                right:70px;
                 z-index: 100;
                 height:80px;
                 cursor: pointer;
@@ -322,15 +290,5 @@
 }
 
 @media only screen and (max-width: 1199px) {
-    .header, .create-game, .announcement {
-        display: none;
-    }
-
-    .tables {
-        height:85vh !important;
-    }
-
-    .expand-header {
-        display: block;
-    }
+    
 }

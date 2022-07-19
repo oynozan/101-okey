@@ -1,5 +1,5 @@
 const m = new bootstrap.Modal(document.getElementById('create-lobby'), {});
-const p = new bootstrap.Modal(document.getElementById('profile'), {});
+const p = new bootstrap.Modal(document.getElementById('profilim'), {});
 const r = new bootstrap.Modal(document.getElementById('radio'), {});
 const c = new bootstrap.Modal(document.getElementById('chip'), {});
 const d = new bootstrap.Modal(document.getElementById('davet'), {});

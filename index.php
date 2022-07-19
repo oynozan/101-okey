@@ -478,7 +478,7 @@
 
     <!--👇👇👇 Profil Modal 👇👇👇-->
     <!--⚠️ buttons.js'de p değişkeninde tanımlı. Butona bağlamak için onclick event'i olarak p.show() atamalısın ⚠️-->
-    <div class="modal" tabindex="-1" id="profile">
+    <div class="modal" tabindex="-1" id="profilim">
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-body">

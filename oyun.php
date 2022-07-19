@@ -101,10 +101,6 @@
                                 <marquee scrollamount="14">Lorem ipsum dolor sit amet consectetur adipisicing elit.</marquee>
                             </div>
 
-                            <div class="expand-header">
-                                <img src="images/caret-down-fill.svg">
-                            </div>
-
                             <div class="tables">
                                 <div class="game-container">
 
@@ -176,8 +172,6 @@
                                 <button class="chat-button"><img src="images/chat.png"></button>
                                 <button class="players-button"><img src="images/players-table.png"></button>
                                 <button class="chat-fullscreen-button"><img src="images/fullscreen.png"></button>
-                                <img src="images/game/cift-git.png" class="cifte-git">
-                                <img src="images/game/seri-git.png" class="seri-git">
                             </div>
 
                             <div class="oda-container">
@@ -494,7 +488,7 @@
 
     <!--👇👇👇 Profil Modal 👇👇👇-->
     <!--⚠️ buttons.js'de p değişkeninde tanımlı. Butona bağlamak için onclick event'i olarak p.show() atamalısın ⚠️-->
-    <div class="modal" tabindex="-1" id="profile">
+    <div class="modal" tabindex="-1" id="profilim">
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-body">

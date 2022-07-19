@@ -78,17 +78,17 @@
   color: white;
 }
 
-#profile .modal-content {
+#profilim .modal-content {
   background-color: #caf9ff;
 }
-#profile .row {
+#profilim .row {
   margin: 20px auto;
 }
-#profile .close-button {
+#profilim .close-button {
   position: absolute;
   bottom: 10px;
 }
-#profile h4 {
+#profilim h4 {
   position: relative;
   z-index: 1;
   top: -30px;
@@ -97,34 +97,34 @@
   font-family: "Roboto Condensed", sans-serif;
   color: white;
 }
-#profile .profil-container {
+#profilim .profil-container {
   padding-bottom: 100px;
   display: flex;
   justify-content: space-around;
 }
-#profile .profil-container .profile-info .top-profile-info {
+#profilim .profil-container .profile-info .top-profile-info {
   padding: 20px;
   position: relative;
 }
-#profile .profil-container .profile-info .top-profile-info > img:not(.level) {
+#profilim .profil-container .profile-info .top-profile-info > img:not(.level) {
   width: 150px;
   height: 150px;
   border: 1px solid rgba(128, 128, 128, 0.179);
   border-radius: 100%;
 }
-#profile .profil-container .profile-info .top-profile-info .level {
+#profilim .profil-container .profile-info .top-profile-info .level {
   position: absolute;
   left: 25px;
   bottom: 25px;
   width: 30px;
 }
-#profile .profil-container .profile-info .top-profile-info span {
+#profilim .profil-container .profile-info .top-profile-info span {
   position: absolute;
   left: 37px;
   bottom: 27px;
   font-family: "Yantramanav", sans-serif;
 }
-#profile .profil-container .profile-info .top-profile-info .profile-buttons {
+#profilim .profil-container .profile-info .top-profile-info .profile-buttons {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -135,16 +135,16 @@
   background-color: rgba(3, 124, 172, 0.3);
   border-radius: 9px;
 }
-#profile .profil-container .profile-info .top-profile-info .profile-buttons button {
+#profilim .profil-container .profile-info .top-profile-info .profile-buttons button {
   background-color: transparent;
   border: none;
   margin: 5px 0;
 }
-#profile .profil-container .profile-info .top-profile-info .profile-buttons button img {
+#profilim .profil-container .profile-info .top-profile-info .profile-buttons button img {
   height: 20px;
   width: 20px;
 }
-#profile .profil-container .profile-info .bottom-profile-info {
+#profilim .profil-container .profile-info .bottom-profile-info {
   margin: auto;
   margin-top: 20px;
   background-color: rgba(221, 221, 221, 0.459);
@@ -155,42 +155,42 @@
   width: 100px;
   display: block;
 }
-#profile .profil-container .profile-info .bottom-profile-info .puan {
+#profilim .profil-container .profile-info .bottom-profile-info .puan {
   position: absolute;
   height: 44px;
   width: 44px;
   top: -10px;
   left: -10px;
 }
-#profile .profil-container .profile-info .bottom-profile-info p {
+#profilim .profil-container .profile-info .bottom-profile-info p {
   text-align: center;
   font-family: "Yantramanav", sans-serif;
   line-height: 25px;
   margin: 0 40px;
 }
-#profile .profil-container .profile-stats table tr td:first-child {
+#profilim .profil-container .profile-stats table tr td:first-child {
   font-family: "Yantramanav", sans-serif;
   font-size: 23px;
   white-space: nowrap;
   padding-right: 50px;
 }
-#profile .profil-container .profile-stats table tr td:first-child img {
+#profilim .profil-container .profile-stats table tr td:first-child img {
   margin-right: 10px;
   height: 30px;
 }
-#profile .profil-container .profile-stats table tr td:last-child {
+#profilim .profil-container .profile-stats table tr td:last-child {
   font-family: "Yantramanav", sans-serif;
   font-size: 19px;
   text-align: center;
   width: 160px;
 }
-#profile .profil-container .profile-stats table tr td:last-child span {
+#profilim .profil-container .profile-stats table tr td:last-child span {
   display: block;
   background-color: rgba(133, 133, 133, 0.41);
   border-radius: 8px;
   width: 100%;
 }
-#profile .banner {
+#profilim .banner {
   position: absolute;
   left: 0;
   right: 0;

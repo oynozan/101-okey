@@ -165,10 +165,6 @@
         .other-players {
             height:calc(100% - 190px) !important;
         }
-
-        .cifte-git, .seri-git {
-            display: none !important;
-        }
     }
 
     .tables {
@@ -274,7 +270,7 @@
     }
 
     .tables {
-        height: calc(100vh - 295px);
+        height: calc(100vh - 295px) !important;
         padding:5px !important;
     }
 
@@ -284,7 +280,7 @@
 }
 
 @media only screen and (max-width: 991px) {
-    #profile .profil-container {
+    #profilim .profil-container {
         flex-direction: column;
 
         .top-profile-info {
@@ -366,7 +362,16 @@
     }
 
     .tables {
-        height: calc(100vh - 345px);
+        height: calc(100vh - 345px) !important;
+    }
+
+    .cifte-git {
+        height:50px !important;
+        bottom:0px !important;
+    }
+    .seri-git {
+        height:50px !important;
+        bottom:0px !important;
     }
 }
 
@@ -443,7 +448,7 @@
         }
     }
 
-    #profile {
+    #profilim {
         .banner {
             height:70px !important;
             top:0;
@@ -596,10 +601,19 @@
             }
         }
     }
+
+    .cifte-git {
+        bottom:-10px !important;
+        left:40px !important;
+    }
+    .seri-git {
+        bottom:-10px !important;
+        right:40px !important;
+    }
 }
 
 @media only screen and (max-width: 391px) {
-    #profile {
+    #profilim {
         .banner {
             height:50px !important;
         }

@@ -6,33 +6,6 @@
   height: 680px;
 }
 
-.expand-header {
-  display: none;
-  width: 100%;
-  height: 20px;
-  background-color: #1764b2;
-  margin-top: -2px;
-}
-.expand-header img {
-  display: block;
-  margin: 0px auto;
-  transform: rotateZ(0deg);
-  padding-top: 3px;
-}
-
-.narrow-header {
-  width: 100%;
-  height: 20px;
-  background-color: #1764b2;
-  margin-top: -2px;
-}
-.narrow-header img {
-  padding-top: 3px;
-  display: block;
-  margin: 0px auto;
-  transform: rotateZ(180deg);
-}
-
 .main .create-game > div button {
   background-color: red;
 }
@@ -45,6 +18,7 @@
   position: relative;
   display: block;
   padding: 0;
+  top: 0;
 }
 .main .tables .game-container {
   position: relative;
@@ -186,9 +160,7 @@
 .main .tables .game-container .cifte-git {
   position: absolute;
   bottom: -30px;
-  left: -400px;
-  right: 0;
-  margin: auto;
+  left: 70px;
   z-index: 100;
   height: 80px;
   cursor: pointer;
@@ -196,9 +168,7 @@
 .main .tables .game-container .seri-git {
   position: absolute;
   bottom: -30px;
-  left: 400px;
-  right: 0;
-  margin: auto;
+  right: 70px;
   z-index: 100;
   height: 80px;
   cursor: pointer;
@@ -285,20 +255,6 @@
 }
 .players-in-game .ingame-list .user > div p {
   margin: 0;
-}
-
-@media only screen and (max-width: 1199px) {
-  .header, .create-game, .announcement {
-    display: none;
-  }
-
-  .tables {
-    height: 85vh !important;
-  }
-
-  .expand-header {
-    display: block;
-  }
 }
 
 /*# sourceMappingURL=oyun.css.map */
