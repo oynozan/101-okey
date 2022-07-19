@@ -4,6 +4,35 @@
     height: 680px;
 }
 
+.expand-header {
+    display: none;
+    width: 100%;
+    height:20px;
+    background-color: rgb(23, 100, 178);
+    margin-top:-2px;
+
+    img {
+        display: block;
+        margin:0px auto;
+        transform: rotateZ(0deg);
+        padding-top:3px;
+    }
+}
+
+.narrow-header {
+    width: 100%;
+    height:20px;
+    background-color: rgb(23, 100, 178);
+    margin-top:-2px;
+
+    img {
+        padding-top:3px;
+        display: block;
+        margin:0px auto;
+        transform: rotateZ(180deg);
+    }
+}
+
 .main {
     .create-game > div button {
         background-color: red;
@@ -229,7 +258,7 @@
     border-top:3px solid black;
 
     .cifte-git, .seri-git {
-        height:90px;
+        height:60px;
     }
 }
 
@@ -289,5 +318,19 @@
                 }
             }
         }
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+    .header, .create-game, .announcement {
+        display: none;
+    }
+
+    .tables {
+        height:85vh !important;
+    }
+
+    .expand-header {
+        display: block;
     }
 }

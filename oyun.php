@@ -101,6 +101,10 @@
                                 <marquee scrollamount="14">Lorem ipsum dolor sit amet consectetur adipisicing elit.</marquee>
                             </div>
 
+                            <div class="expand-header">
+                                <img src="images/caret-down-fill.svg">
+                            </div>
+
                             <div class="tables">
                                 <div class="game-container">
 
@@ -149,10 +153,8 @@
                                             </div>
                                         </div>
 
-                                        <div class="git-buttons">
-                                            <img src="images/game/cift-git.png" class="cifte-git">
-                                            <img src="images/game/seri-git.png" class="seri-git">
-                                        </div>
+                                        <img src="images/game/cift-git.png" class="cifte-git">
+                                        <img src="images/game/seri-git.png" class="seri-git">
 
                                         <div class="middle-okey-container">
                                             <div class="middle-okey">
@@ -372,6 +374,7 @@
                         </div>
                     </div>
                     <div class="col-4 players-in-game">
+                        <button class="sistemden-cikis-yap">×</button>
                         <h4>Masadakiler</h4>
                         <div class="ingame-list">
                             <div class="user">
@@ -409,13 +412,354 @@
             <div class="col-xl-2"></div>
         </div>
     </div>
+    
+    <!--Masa Oluşturma-->
+    <div class="modal" tabindex="-1" id="create-lobby">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <img src="images/banner.png" class="banner">
+                    <h4>Yeni Masa Oluştur</h4>
 
+                    <div class="row first-selection-container">
+                        <div class="col-6">
+                            <label>Oyunlar: </label>
+                            <select id="oyunlar" class="form-control selection-input">
+                                <option>Okey</option>
+                                <option>Çanak</option>
+                                <option>101</option>
+                            </select>
+                        </div>
+                        <div class="col-6">
+                            <label>Oyuncu Sayısı: </label>
+                            <select id="oyuncu-sayisi" class="form-control selection-input">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <input type="text" class="form-control" placeholder="Masa İsmi">
+                    </div>
+                    <div class="row second-selection-container">
+                        <div class="col-6">
+                            <label>Chip Miktarı: </label>
+                            <select id="chip-miktari" class="form-control selection-input">
+                                <option>100</option>
+                                <option>250</option>
+                                <option>500</option>
+                            </select>
+                        </div>
+                        <div class="col-6">
+                            <label>Bekleme Süresi: </label>
+                            <select id="bekleme-suresi" class="form-control selection-input">
+                                <option>20</option>
+                                <option>40</option>
+                                <option>60</option>
+                                <option>80</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <p>Ayarlar:</p>
+                            <input type="checkbox"><span>Masa sohbeti kapalı</span><br>
+                            <input type="checkbox"><span>İzleyici sohbeti kapalı</span><br>
+                            <input type="checkbox"><span>Masaya izleyici alma</span><br>
+                            <input type="checkbox"><span>Eşli Oyun</span><br>
+                            <input type="checkbox"><span>Çanaklı</span><br>
+                            <input type="checkbox"><span>Göstergeli</span><br>
+                            <input type="checkbox"><span>Renkli</span><br>
+                        </div>
+                        <div class="col-6">
+                            <p>Düşülecek Puan:</p>
+                            <input type="radio" name="puan"><span>Tek El</span><br>
+                            <input type="radio" name="puan"><span>8</span><br>
+                            <input type="radio" name="puan"><span>16</span><br>
+                            <input type="radio" name="puan"><span>24</span><br>
+                            <input type="radio" name="puan"><span>32</span><br>
+                            <input type="radio" name="puan"><span>40</span><br>
+                        </div>
+                    </div>
+                    <div class="row buttons-container">
+                        <input value="OLUŞTUR" type="button">
+                        <input value="VAZGEÇ" type="button" onclick="javascript: m.hide()">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--👇👇👇 Profil Modal 👇👇👇-->
+    <!--⚠️ buttons.js'de p değişkeninde tanımlı. Butona bağlamak için onclick event'i olarak p.show() atamalısın ⚠️-->
+    <div class="modal" tabindex="-1" id="profile">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <img src="images/banner2.png" class="banner">
+                    <h4>Lorem Ipsum</h4><br><br>
+
+                    <div class="profil-container">
+                        <div class="profile-info">
+                            <div class="top-profile-info">
+                                <img src="images/pp.png">
+                                <img src="images/star.png" class="level">
+                                <span>0</span>
+                                <div class="profile-buttons">
+                                    <button class="engelle">
+                                        <img src="images/block.png">
+                                    </button>
+                                    <button class="mesaj-gonder">
+                                        <img src="images/message.png">
+                                    </button>
+                                    <button class="hediye-gonder">
+                                        <img src="images/gift.png">
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="bottom-profile-info">
+                                <img src="images/puan.png" class="puan">
+                                <p>30.000</p>
+                            </div>
+                        </div>
+                        <div class="profile-stats">
+                            <table cellpadding="10">
+                                <tr>
+                                    <td><img src="images/i1.png">Toplam oyun sayısı</td>
+                                    <td><span>2</span></td>
+                                </tr>
+                                <tr>
+                                    <td><img src="images/i2.png">Kazandığı oyun sayısı</td>
+                                    <td><span>1</span></td>
+                                </tr>
+                                <tr>
+                                    <td><img src="images/i3.png">Kaybettiği oyun sayısı</td>
+                                    <td><span>1</span></td>
+                                </tr>
+                                <tr>
+                                    <td><img src="images/i4.png">Galibiyet yüzdesi</td>
+                                    <td><span>%50</span></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                    <img class="close-button" src="images/pencerekapat.png" onclick="javascript: p.hide()">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--👇👇👇 Radyo Modal 👇👇👇-->
+    <!--⚠️ buttons.js'de r değişkeninde tanımlı. Butona bağlamak için onclick event'i olarak r.show() atamalısın ⚠️-->
+    <div class="modal" tabindex="-1" id="radio">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <img src="images/radyo.png" class="radio-image">
+                    <div class="radio-content">
+                        <p>Lütfen aşağıdan şarkı seçiniz 👇</p>
+                        <div class="music-list">
+                            <div>Lorem Ipsum <img src="images/playicon.png"></div>
+                            <div>Lorem Ipsum <img src="images/playicon.png"></div>
+                            <div>Lorem Ipsum <img src="images/playicon.png"></div>
+                            <div>Lorem Ipsum <img src="images/playicon.png"></div>
+                            <div>Lorem Ipsum <img src="images/playicon.png"></div>
+                            <div>Lorem Ipsum <img src="images/playicon.png"></div>
+                            <div>Lorem Ipsum <img src="images/playicon.png"></div>
+                            <div>Lorem Ipsum <img src="images/playicon.png"></div>
+                            <div>Lorem Ipsum <img src="images/playicon.png"></div>
+                            <div>Lorem Ipsum <img src="images/playicon.png"></div>
+                            <div>Lorem Ipsum <img src="images/playicon.png"></div>
+                            <div>Lorem Ipsum <img src="images/playicon.png"></div>
+                            <div>Lorem Ipsum <img src="images/playicon.png"></div>
+                            <div>Lorem Ipsum <img src="images/playicon.png"></div>
+                        </div>
+                    </div>
+
+                    <div class="button-menu">
+                        <button class="close-button" onclick="javascript: r.hide()">Kapat</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--👇👇👇 Chip Modal 👇👇👇-->
+    <!--⚠️ buttons.js'de c değişkeninde tanımlı. Butona bağlamak için onclick event'i olarak c.show() atamalısın ⚠️-->
+    <div class="modal" tabindex="-1" id="chip">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="chip-shop-content">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>
+                                        <p>COİN MİKTARI</p>
+                                    </td>
+                                    <td>
+                                        <p>FİYAT</p>
+                                    </td>
+                                    <td>
+                                        <p>SATIN AL</p>
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <p><img src="images/coins.png">10000</p>
+                                    </td>
+                                    <td>
+                                        <p class="fiyat">5 TL</p>
+                                    </td>
+                                    <td>
+                                        <button class="buy-button">SATIN AL</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p><img src="images/coins.png">10000</p>
+                                    </td>
+                                    <td>
+                                        <p class="fiyat">5 TL</p>
+                                    </td>
+                                    <td>
+                                        <button class="buy-button">SATIN AL</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p><img src="images/coins.png">10000</p>
+                                    </td>
+                                    <td>
+                                        <p class="fiyat">5 TL</p>
+                                    </td>
+                                    <td>
+                                        <button class="buy-button">SATIN AL</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p><img src="images/coins.png">10000</p>
+                                    </td>
+                                    <td>
+                                        <p class="fiyat">5 TL</p>
+                                    </td>
+                                    <td>
+                                        <button class="buy-button">SATIN AL</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p><img src="images/coins.png">10000</p>
+                                    </td>
+                                    <td>
+                                        <p class="fiyat">5 TL</p>
+                                    </td>
+                                    <td>
+                                        <button class="buy-button">SATIN AL</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p><img src="images/coins.png">10000</p>
+                                    </td>
+                                    <td>
+                                        <p class="fiyat">5 TL</p>
+                                    </td>
+                                    <td>
+                                        <button class="buy-button">SATIN AL</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--👇👇👇 Davet Modal 👇👇👇-->
+    <!--⚠️ buttons.js'de d değişkeninde tanımlı. Butona bağlamak için onclick event'i olarak d.show() atamalısın ⚠️-->
+    <div class="modal" tabindex="-1" id="davet">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <img src="images/banner2.png" class="banner">
+                    <h4>Oyun Hazır</h4>
+
+                    <div class="invite-content">
+                        <div class="start-game-text">
+                            <p>Oyunu başlatabilirsiniz.</p>
+                            <small>Yandaki menüden arkadaşlarınızı davet edin!</small>
+                            <div class="button-menu">
+                                <button class="start-game-button"><img src="images/aktif.png"></button>
+                                <button class="close-game-button" onclick="javascript: d.hide();"><img src="images/penceredenkalk.png"></button>
+                            </div>
+                        </div>
+                        <p class="mobile-text">Oyunu başlatabilirsiniz.</p>
+                        <div class="invite-menu">
+                            <div class="user-invite">
+                                <img src="images/pp.png">
+                                <span>Lorem I.</span>
+                                <img src="images/ekle.png">
+                            </div>
+                            <div class="user-invite">
+                                <img src="images/pp.png">
+                                <span>Lorem I.</span>
+                                <img src="images/ekle.png">
+                            </div>
+                            <div class="user-invite">
+                                <img src="images/pp.png">
+                                <span>Lorem I.</span>
+                                <img src="images/ekle.png">
+                            </div>
+                            <div class="user-invite">
+                                <img src="images/pp.png">
+                                <span>Lorem I.</span>
+                                <img src="images/ekle.png">
+                            </div>
+                            <div class="user-invite">
+                                <img src="images/pp.png">
+                                <span>Lorem I.</span>
+                                <img src="images/ekle.png">
+                            </div>
+                            <div class="user-invite">
+                                <img src="images/pp.png">
+                                <span>Lorem I.</span>
+                                <img src="images/ekle.png">
+                            </div>
+                            <div class="user-invite">
+                                <img src="images/pp.png">
+                                <span>Lorem I.</span>
+                                <img src="images/ekle.png">
+                            </div>
+                            <div class="user-invite">
+                                <img src="images/pp.png">
+                                <span>Lorem I.</span>
+                                <img src="images/ekle.png">
+                            </div>
+                        </div>
+                        <div class="button-menu-mobile">
+                            <button class="start-game-button"><img src="images/aktif.png"></button>
+                            <button class="close-game-button" onclick="javascript: d.hide();"><img src="images/penceredenkalk.png"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@joeattardi/emoji-button@3.0.3/dist/index.min.js"></script>
     <script src="js/buttons-game.js"></script>
     <script src="js/hide-menu.js"></script>
     <script src="js/chat.js"></script>
-    <script src="js/resolution.js"></script>
     <script src="js/emoji.js"></script>
 </body>
 </html>

@@ -135,6 +135,7 @@
 @media only screen and (max-width: 1199px) {
     body {
         overflow-y: hidden;
+        zoom:1 !important;
     }
 
     .ingame-create-game {
@@ -273,12 +274,42 @@
     }
 
     .tables {
-        height: calc(100vh - 295px) !important;
+        height: calc(100vh - 295px);
         padding:5px !important;
     }
 
     .bottom-menu {
         display: flex !important;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    #profile .profil-container {
+        flex-direction: column;
+
+        .top-profile-info {
+            display: block;
+            width: fit-content;
+            margin:0 auto;
+        }
+
+        .profile-stats {
+            margin-top:50px;
+        }
+    }
+
+    #radio .radio-content .music-list {
+        grid-template-columns: auto auto auto;
+    }
+
+    #davet {
+        .button-menu {
+            button {
+                img {
+                    height:30px !important;
+                }
+            }
+        }
     }
 }
 
@@ -335,7 +366,7 @@
     }
 
     .tables {
-        height: calc(100vh - 345px) !important;
+        height: calc(100vh - 345px);
     }
 }
 
@@ -411,6 +442,34 @@
             }
         }
     }
+
+    #profile {
+        .banner {
+            height:70px !important;
+            top:0;
+        }
+
+        h4 {
+            top:-5px !important;
+        }
+
+        br {
+            display: none;
+        }
+
+        .profil-container {
+            padding-bottom:0;
+        }
+
+        table tr {
+            td:first-child {
+                padding-right:10px !important;
+            }
+            td:last-child {
+                width:100px !important;
+            }
+        }
+    }
 }
 
 @media only screen and (max-width: 482px) {
@@ -463,6 +522,38 @@
             height:calc(100% - 120px) !important;
         }
     }
+
+    #radio .radio-content .music-list {
+        grid-template-columns: auto auto;
+    }
+
+    #davet {
+        .mobile-text {
+            display: block !important;
+        }
+
+        .button-menu-mobile {
+            display: flex !important;
+        }
+        
+        .start-game-text {
+            display: none;
+        }
+
+        .invite-menu {
+            width: 100% !important;
+        }
+
+        .banner {
+            height:50px;
+            top:-30px;
+        }
+
+        h4 {
+            font-size:17px;
+            top:-35px;
+        }
+    }
 }
 
 @media only screen and (max-width: 415px) {
@@ -503,6 +594,23 @@
                     width:30px !important;
                 }
             }
+        }
+    }
+}
+
+@media only screen and (max-width: 391px) {
+    #profile {
+        .banner {
+            height:50px !important;
+        }
+
+        h4 {
+            font-size:23px !important;
+            top:-10px !important;
+        }
+
+        td:first-child {
+            font-size:14px !important;
         }
     }
 }

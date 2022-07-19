@@ -1,0 +1,476 @@
+@import 'fonts.scss';
+
+//"Create lobby" modal
+#create-lobby {
+    font-family: $y;
+
+    .modal-content {
+        background-color: rgb(165, 245, 255);
+    }
+
+    .row {
+        margin:20px auto;
+    }
+
+    h4 {
+        position: relative;
+        z-index: 1;
+        top:-20px;
+        font-size:16px;
+        text-align: center;
+        font-family:$rc;
+        color:white;
+    }
+
+    .banner {
+        position: absolute;
+        left:0;
+        right:0;
+        margin: auto;
+        top:-30px;
+        height: 90px;
+        z-index: 0;
+    }
+    
+    .first-selection-container,
+    .second-selection-container {
+        display: flex;
+
+        > div {
+            &:first-child {
+                padding:0;
+                padding-right:5px;
+            }
+            &:last-child {
+                padding:0;
+                padding-left:5px;
+            }
+        }
+    }
+    
+    input[type="radio"], input[type="checkbox"] {
+        margin-right:5px;
+    }
+
+    input, select {
+        border:none;
+        background-color: rgb(226, 252, 255);
+    }
+
+    .buttons-container {
+        display: flex;
+        justify-content: center;
+        padding-top:10px;
+        border-top:1px solid rgb(242, 242, 242);
+
+        input[type="button"] {
+            margin:0 10px;
+            font-family: $l;
+            width: fit-content;
+            border:none;
+            border-radius: 8px;
+            padding:5px 20px;
+            font-size:19px;
+    
+            &:first-child {
+                background-color: rgb(2, 155, 2);
+                color:white;
+            }
+            &:last-child {
+                background-color: rgb(225, 2, 2);
+                color:white;
+            }
+        }
+    }
+}
+
+#profile {
+    .modal-content {
+        background-color: rgb(202, 249, 255);
+    }
+
+    .row {
+        margin:20px auto;
+    }
+
+    .close-button {
+        position: absolute;
+        bottom:10px;
+    }
+
+    h4 {
+        position: relative;
+        z-index: 1;
+        top:-30px;
+        font-size:30px;
+        text-align: center;
+        font-family:$rc;
+        color:white;
+    }
+
+    .profil-container {
+        padding-bottom:100px;
+        display: flex;
+        justify-content: space-around;
+
+        .profile-info {
+            .top-profile-info {
+                padding:20px;
+                position: relative;
+
+                > img:not(.level) {
+                    width:150px;
+                    height:150px;
+                    border:1px solid rgba(128, 128, 128, 0.179);
+                    border-radius: 100%;
+                }
+    
+                .level {
+                    position: absolute;
+                    left:25px;
+                    bottom:25px;
+                    width:30px;
+                }
+    
+                span {
+                    position: absolute;
+                    left:37px;
+                    bottom:27px;
+                    font-family: $y;
+                }
+
+                .profile-buttons {
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    position: absolute;
+                    right:-20px;
+                    top:50%;
+                    transform: translateY(-50%);
+                    background-color: rgba(3, 124, 172, 0.3);
+                    border-radius: 9px;
+        
+                    button {
+                        background-color: transparent;
+                        border: none;
+                        margin:5px 0;
+
+                        img {
+                            height:20px;
+                            width:20px;
+                        }
+                    }
+                }
+            }
+            .bottom-profile-info {
+                margin:auto;
+                margin-top:20px;
+                background-color: rgba(221, 221, 221, 0.459);
+                height:25px;
+                position: relative;
+                border:1px solid rgba(128, 128, 128, 0.238);
+                border-radius: 8px;
+                width: 100px;
+                display: block;
+
+                .puan {
+                    position: absolute;
+                    height:44px;
+                    width:44px;
+                    top:-10px;
+                    left:-10px;
+                }
+
+                p {
+                    text-align: center;
+                    font-family: $y;
+                    line-height:25px;
+                    margin:0 40px;
+                }
+            }
+        }
+
+        .profile-stats {
+            table {
+                tr {
+                    td:first-child {
+                        font-family: $y;
+                        font-size:23px;
+                        white-space: nowrap;
+                        padding-right:50px;
+
+                        img {
+                            margin-right:10px;
+                            height:30px;
+                        }
+                    }
+                    td:last-child {
+                        font-family: $y;
+                        font-size:19px;
+                        text-align: center;
+                        width:160px;
+
+                        span {
+                            display: block;
+                            background-color: rgba(133, 133, 133, 0.41);
+                            border-radius: 8px;
+                            width:100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .banner {
+        position: absolute;
+        left:0;
+        right:0;
+        margin: auto;
+        top:-30px;
+        height: 90px;
+        z-index: 0;
+    }
+}
+
+#radio {
+    .radio-image {
+        position: absolute;
+        left:0;
+        right:0;
+        margin:auto;
+        top:-100px;
+        height:200px;
+    }
+
+    .radio-content {
+        margin-top:110px;
+
+        p {
+            text-align: center;
+            font-size:25px;
+            font-family: $rc;
+        }
+
+        .music-list {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+
+            > div {
+                white-space: nowrap;
+                display: block;
+                margin: 10px auto;
+                background-color: rgba(174, 211, 244, 0.289);
+                border-radius: 8px;
+                padding:4px 10px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .button-menu {
+        padding-top:20px;
+        display: flex;
+        justify-content: center;
+
+        button {
+            margin:0 10px;
+            font-family: $l;
+            width: fit-content;
+            border:none;
+            border-radius: 8px;
+            padding:5px 40px;
+            font-size:19px;
+            background-color: red;
+            color:white;
+        }
+    }
+}
+
+#chip {
+    .modal-body {
+        background-image: url('../images/coins_explosion1.png');
+        background-size: cover;
+        background-color: rgb(255, 183, 0);
+        border-radius: 8px;
+    }
+
+    .chip-shop-content {
+        background-color: rgba(0,0,0,0.6);
+        padding:10px;
+        border-radius: 8px;
+
+        table {
+            width: 100%;
+            color:white;
+            font-family: $rc;
+            font-size:23px;
+
+            thead {
+                color:rgb(255, 195, 116);
+                font-family: $y;
+
+                td:last-child p {
+                    float:right;
+                }
+            }
+
+            tbody tr {
+                td:first-child {
+                    img {
+                        height:40px;
+                        margin-right:10px;
+                    }
+                }
+
+                .buy-button {
+                    float: right;
+                    border:none;
+                    border-radius: 10px;
+                    background-image: linear-gradient(to top, gold, orange);
+                }
+            }
+        }
+    }
+}
+
+#davet {
+    .modal-content {
+        background-image:linear-gradient(to bottom, white, rgb(224, 224, 224))
+    }
+
+    h4 {
+        position: relative;
+        z-index: 1;
+        top:-45px;
+        font-size:25px;
+        text-align: center;
+        font-family:$rc;
+        color:white;
+    }
+
+    .banner {
+        position: absolute;
+        left:0;
+        right:0;
+        margin: auto;
+        top:-50px;
+        height: 90px;
+        z-index: 0;
+    }
+
+    .invite-content {
+        display: flex;
+        flex-direction: row;
+        padding:40px 10px;
+
+        .start-game-text {
+            width:100%;
+            position: relative;
+
+            p {
+                text-align: center;
+                margin-top:90px;
+                font-family: $rc;
+                font-size:20px;
+            }
+
+            small {
+                display:block;
+                width:100%;
+                text-align: center;
+                margin-bottom:90px;
+                font-family: $l;
+                color:gray;
+                font-size:17px;
+            }
+
+            .button-menu {
+                position: absolute;
+                width:100%;
+                bottom:0;
+                display: flex;
+                justify-content: center;
+
+                button {
+                    border:none;
+                    background-color: transparent;
+
+                    img {
+                        height:50px;
+                        border-radius: 12px;
+                    }
+                }
+            }
+        }
+
+        .mobile-text {
+            display: none;
+            font-family: $rc;
+            font-size:20px;
+            position: absolute;
+            left:0;
+            right:0;
+            margin:auto;
+            width: fit-content;
+            top:50px;
+        }
+
+        .button-menu-mobile {
+            position: absolute;
+            bottom:10px;
+            display:none;
+            justify-content: center;
+            width: 100%;
+            left:0;
+
+            button {
+                border:none;
+                background-color: transparent;
+
+                img {
+                    height:25px;
+                    border-radius: 12px;
+                }
+            }
+        }
+
+        .invite-menu {
+            width:300px;
+            max-height:400px;
+            overflow-y:auto;
+            padding:5px 0 0 0;
+            border:1px solid rgba(128, 128, 128, 0.364);
+            border-radius: 8px;
+            background-color: rgb(211, 211, 211);
+            box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.149);
+
+            .user-invite {
+                margin-bottom:5px;
+                display: block;
+                background-color: rgb(248, 248, 248);
+                padding:5px;
+                
+                img:first-child {
+                    height:50px;
+                    width:50px;
+                }
+
+                img:last-child {
+                    float:right;
+                    margin-top:13px;
+                    margin-right:10px;
+                }
+            }
+        }
+    }
+}
+
+.modal-backdrop {
+    height: 100% !important;
+    width: 100% !important;
+}
+
+.modal {
+    overflow: hidden;
+}

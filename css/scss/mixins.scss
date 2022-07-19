@@ -1,0 +1,102 @@
+@mixin oda-container {
+    .oda-container {
+        overflow-y: auto;
+        height:580px;
+        display: none;
+        background-color: rgba(9, 72, 155, 0.527);
+        border:3px solid black;
+        padding:0 4px;
+        width: 100%;
+
+        .oda-sec-container {
+            border-collapse: separate;
+            border-spacing: 0 6px;
+            width: 100%;
+            display: table;
+    
+            .oda {
+                display: table-row;
+                background-image:linear-gradient(to bottom, rgb(202,202,202) 50%, rgb(223,223,223) 50%);
+                margin:3px 10px;
+                width: 100%;
+    
+                &.oda-title {
+                    background-image:url('../images/oda-title.png');
+                    text-transform: uppercase;
+                }
+    
+                > * {
+                    display: table-cell;
+                    padding:20px 5px;
+    
+                    &:first-child {
+                        border-radius:7px 0 0 7px;
+                    }
+                    &:last-child {
+                        border-radius:0 7px 7px 0;
+                    }
+                }
+    
+                h3 {
+                    font-size:20px;
+                    font-family: $d;
+                    margin-bottom:0;
+                }
+    
+                p {
+                    font-size:17px;
+                    margin-bottom:0;
+                    font-family:$y;
+    
+                    img {
+                        height:30px;
+                        margin-left:10px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 482px) {
+        .oda, .oda-title {
+            h3 {
+                font-size:17px !important;
+            }
+
+            p {
+                font-size:14px !important;
+
+                img {
+                    margin-left:0 !important;
+                }
+            }
+        }
+    }
+
+    //Modal
+    .oda-modal-button-menu {
+        display: flex;
+        justify-content: center;
+        padding-top:10px;
+
+        .oda-sec-confirm-button,
+        .oda-sec-close-button {
+            margin:0 10px;
+            font-family: $l;
+            width: fit-content;
+            border:none;
+            border-radius: 8px;
+            padding:5px 20px;
+            font-size:19px;
+        }
+
+        .oda-sec-confirm-button {
+            background-color: rgb(0, 126, 251);
+            color:white;
+        }
+        .oda-sec-close-button {
+            background-color: red;
+            color:white;
+        }
+    }
+}

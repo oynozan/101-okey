@@ -1,10 +1,12 @@
 @import 'fonts.scss';
+@import 'mixins.scss';
 
 body {
     margin:0;
     padding:0;
     overflow-x: hidden !important;
     background-image: url("../images/background.png");
+    zoom:0.8;
 }
 
 .max-width-1920 {
@@ -420,93 +422,37 @@ body {
         }
     }
 
-    .oda-container {
-        overflow-y: auto;
-        height:580px;
-        display: none;
-        background-color: rgba(9, 72, 155, 0.527);
-        border:3px solid black;
-        padding:0 4px;
-        width: 100%;
+    @include oda-container;
 
-        .oda-sec-container {
-            border-collapse: separate;
-            border-spacing: 0 6px;
-            width: 100%;
-            display: table;
-    
-            .oda {
-                display: table-row;
-                background-image:linear-gradient(to bottom, rgb(202,202,202) 50%, rgb(223,223,223) 50%);
-                margin:3px 10px;
-                width: 100%;
-    
-                &.oda-title {
-                    background-image:url('../images/oda-title.png');
-                    text-transform: uppercase;
-                }
-    
-                > * {
-                    display: table-cell;
-                    padding:20px 5px;
-    
-                    &:first-child {
-                        border-radius:7px 0 0 7px;
-                    }
-                    &:last-child {
-                        border-radius:0 7px 7px 0;
-                    }
-                }
-    
-                h3 {
-                    font-size:20px;
-                    font-family: $d;
-                    margin-bottom:0;
-                }
-    
-                p {
-                    font-size:17px;
-                    margin-bottom:0;
-                    font-family:$y;
-    
-                    img {
-                        height:30px;
-                        margin-left:10px;
-                    }
-                }
+    .settings-mobile {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        bottom:0;
+        left:0;
+        right:0;
+
+        button {
+            margin:0 5px;
+            background-color: rgb(0, 150, 236);
+            border:none;
+            padding:5px;
+            border-radius: 10px;
+            box-shadow: 4px 4px 0px 0px rgb(0, 75, 189);
+
+            &:hover {
+                background-color: rgb(0, 83, 236);
+                box-shadow: 4px 4px 0px 0px rgb(0, 39, 99);
             }
-    
-            .settings-mobile {
-                display: flex;
-                justify-content: center;
-                position: absolute;
-                bottom:0;
-                left:0;
-                right:0;
-    
-                button {
-                    margin:0 5px;
-                    background-color: rgb(0, 150, 236);
-                    border:none;
-                    padding:5px;
-                    border-radius: 10px;
-                    box-shadow: 4px 4px 0px 0px rgb(0, 75, 189);
-    
-                    &:hover {
-                        background-color: rgb(0, 83, 236);
-                        box-shadow: 4px 4px 0px 0px rgb(0, 39, 99);
-                    }
-    
-                    img {
-                        width:30px;
-                    }
-                }
-            }
-    
-            .settings-mobile {
-                display: none;
+
+            img {
+                width:30px;
             }
         }
+    }
+
+    .settings-mobile {
+        display: none;
     }
 
     .bottom-menu {
@@ -671,7 +617,7 @@ body {
         
         input {
             margin-top:5px;
-            width: calc(100% - 90px);
+            width: calc(100% - 130px);
             display: inline-block;
             border-radius:20px 0 0 20px;
             border:none;
@@ -684,7 +630,7 @@ body {
             }
         }
 
-        .send-message, .emoji-menu {
+        .send-message, .emoji-menu, .sistemden-cikis-yap {
             cursor: pointer;
             margin-left:5px;
             width:30px;
@@ -728,6 +674,19 @@ body {
     }
 }
 
+button.sistemden-cikis-yap {
+    position: absolute;
+    right:0;
+    bottom:0;
+    border-radius: 0 0 17px 0;
+    background-color: red;
+    color:white;
+    height:40px;
+    width:40px;
+    border-left:3px solid black;
+    border-top:3px solid black;
+}
+
 //Scrollbar
 ::-webkit-scrollbar {
     width: 10px;
@@ -747,4 +706,5 @@ body {
     z-index:999;
 }
 
+@import 'modal.scss';
 @import 'responsive.scss';

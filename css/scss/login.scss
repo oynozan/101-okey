@@ -1,4 +1,6 @@
 @import 'fonts.scss';
+@import 'mixins.scss';
+@import 'modal.scss';
 
 //General
 body {
@@ -62,7 +64,7 @@ body {
         }
 
         form {
-            input {
+            input, .oda-sec {
                 width:80%;
             }
         }
@@ -72,13 +74,40 @@ body {
 .form-container {
     background-color: white;
     border-radius: 30px;
-    padding:30px 20px;
+
+    .tabs {
+        height:50px;
+        margin-bottom:10px;
+
+        > div {
+            padding:0;
+        }
+        
+        a {
+            background-color: rgb(0, 119, 255);
+            display: block;
+            text-align: center;
+            line-height: 50px;
+            color:white;
+            text-decoration: none;
+
+            &.show-register-container {
+                border-radius: 30px 0 0 0;
+                background-color: rgb(255, 255, 255);
+                color:black;
+            }
+            &.show-login-container {
+                border-radius: 0 30px 0 0;
+            }
+        }
+    }
 
     .button-menu {
         display: flex;
         justify-content: center;
         padding-bottom:20px;
-        border-bottom: 4px solid rgba(224, 224, 224, 0.445);;
+        padding-top:20px;
+        border-bottom: 4px solid rgba(224, 224, 224, 0.445);
 
         button {
             background-color: transparent;
@@ -117,7 +146,7 @@ body {
             color:rgb(1, 109, 250);
         }
     
-        input {
+        input, .oda-sec {
             display:block;
             margin:20px auto;
             width:70%;
@@ -137,6 +166,11 @@ body {
                 }
             }
         }
+
+        .oda-sec {
+            background-color: rgb(0, 153, 255);
+            color:white;
+        }
     }
     
 }
@@ -155,6 +189,8 @@ body {
     }
 
     .button-menu-container {
+        margin-bottom:-50px;
+
         .button-menu {
             justify-content: space-around;
 
@@ -164,4 +200,9 @@ body {
             }
         }
     }
+}
+
+@include oda-container;
+.oda-container {
+    display: block;
 }
